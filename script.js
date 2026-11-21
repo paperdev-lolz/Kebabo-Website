@@ -303,6 +303,8 @@ const STATE = {
 // 3. Helper Functions
 // =============================================================================
 
+const USD_RATE = 12850; // 1 USD ≈ 12 850 UZS
+
 /**
  * Format currency strictly as `XX 000 so'm`
  */
@@ -310,6 +312,14 @@ function formatCurrency(amount) {
   const numStr = Math.round(amount).toString();
   const formatted = numStr.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   return `${formatted} so'm`;
+}
+
+/**
+ * Format equivalent USD price
+ */
+function formatUSD(amount) {
+  const usd = amount / USD_RATE;
+  return `≈ $${usd.toFixed(2)}`;
 }
 
 /**
@@ -659,6 +669,7 @@ function openDishModal(itemId, event = null) {
   const number = document.getElementById("dishModalNumber");
   const cat = document.getElementById("dishModalCategory");
   const price = document.getElementById("dishModalPrice");
+  const priceUSD = document.getElementById("dishModalPriceUSD");
   const desc = document.getElementById("dishModalDesc");
 
   if (title) title.textContent = item.name;
@@ -672,6 +683,7 @@ function openDishModal(itemId, event = null) {
   }
   if (cat) cat.textContent = item.categoryLabel;
   if (price) price.textContent = formatCurrency(item.price);
+  if (priceUSD) priceUSD.textContent = formatUSD(item.price);
   if (desc) desc.textContent = item.desc;
 
   // Load matching 3D Model into the Three.js viewport
@@ -814,7 +826,10 @@ function renderMenuGrid() {
               ${badgeHtml}
               <span class="category-pill">${item.categoryLabel}</span>
             </div>
-            <div class="item-price">${formatCurrency(item.price)}</div>
+            <div class="item-price-wrap">
+              <span class="item-price">${formatCurrency(item.price)}</span>
+              <span class="item-price-usd">${formatUSD(item.price)}</span>
+            </div>
           </div>
           <div class="card-body">
             <h3 class="item-name">${item.name}</h3>

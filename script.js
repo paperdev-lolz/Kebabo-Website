@@ -32,7 +32,7 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 15000,
     desc: "Klassik an'anaviy mayin qiyma shashlik",
-    videoUrl: "videos/qiyma-shashlik.mp4"
+    videoUrl: "videos/obichniy-qiyma.mp4"
   },
   {
     id: "sh-14",
@@ -42,7 +42,7 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 18000,
     desc: "Buxoroning mashhur G`ijdivon uslubidagi shirali qiyma",
-    videoUrl: "videos/qiyma-shashlik.mp4"
+    videoUrl: "videos/gijdivon.mp4"
   },
   {
     id: "sh-15",
@@ -52,7 +52,7 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 22000,
     desc: "Issiq ko'mirda erib turuvchi nozik Mozzarella pishloqli qiyma",
-    videoUrl: "videos/qiyma-shashlik.mp4"
+    videoUrl: "videos/qiyma-mozzarella.mp4"
   },
   {
     id: "sh-22",
@@ -62,7 +62,7 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 18000,
     desc: "Xushbo'y yangi sabzavotlar va ziravorlar uyg'unligi",
-    videoUrl: "videos/qiyma-shashlik.mp4"
+    videoUrl: "videos/avashnoy-qiyma.mp4"
   },
   {
     id: "sh-23",
@@ -72,7 +72,7 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 18000,
     desc: "O'tkir qizil qalampir va sharq ziravorlari bilan olovli kabob",
-    videoUrl: "videos/qiyma-shashlik.mp4"
+    videoUrl: "videos/achchiq-qiyma.mp4"
   },
   {
     id: "sh-25",
@@ -82,7 +82,7 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 20000,
     desc: "Usta oshpazning maxsus retsepti asosidagi saralangan go'sht",
-    videoUrl: "videos/qiyma-shashlik.mp4"
+    videoUrl: "videos/zakaz-qiyma.mp4"
   },
   {
     id: "sh-16",
@@ -92,7 +92,7 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 16000,
     desc: "Qarsildoq qovurilgan tovuq go'shti (qanot yoki son qismi)",
-    videoUrl: "videos/tovuq-shashlik.mp4"
+    videoUrl: "videos/tabaki-qanot.mp4"
   },
   {
     id: "sh-17",
@@ -112,7 +112,7 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 22000,
     desc: "Mayin lahm go'sht va xushbo'y dumba yog'ining shirali kombinatsiyasi",
-    videoUrl: "videos/torghamchi-shashlik.mp4"
+    videoUrl: "videos/torghamchi-yogli.mp4"
   },
   {
     id: "sh-18",
@@ -122,7 +122,7 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 30000,
     desc: "Kavkazcha usulda marinadlangan yirik mol go'shti lahm bo'laklari",
-    videoUrl: "videos/torghamchi-shashlik.mp4"
+    videoUrl: "videos/kavkaz-mol.mp4"
   },
   {
     id: "sh-36",
@@ -132,7 +132,7 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 33000,
     desc: "Hosilador qo'zichoq go'shti va an'anaviy xushbo'y tog' giyohlari",
-    videoUrl: "videos/torghamchi-shashlik.mp4"
+    videoUrl: "videos/kavkaz-qoy.mp4"
   },
   {
     id: "sh-21",
@@ -142,7 +142,7 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 24000,
     desc: "Press ostida qarsildoq qilib qovurilgan sarxil jo'ja tabaka",
-    videoUrl: "videos/tovuq-shashlik.mp4"
+    videoUrl: "videos/kavkaz-tabaki.mp4"
   },
   {
     id: "sh-20",
@@ -152,7 +152,7 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 22000,
     desc: "Marvariddek tizilgan shirali, qiyma va lahm qismli nozik kabob",
-    videoUrl: "videos/qiyma-shashlik.mp4"
+    videoUrl: "videos/marvarid.mp4"
   },
   {
     id: "sh-nap",
@@ -162,7 +162,7 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 23000,
     desc: "Go'sht va mayin dumba qatlamlarining go'zal qavatli simfoniyasi",
-    videoUrl: "videos/dumba-shashlik.mp4"
+    videoUrl: "videos/napalyon.mp4"
   },
   {
     id: "sh-26",
@@ -192,7 +192,7 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 23000,
     desc: "Yupqa qarsildoq lavashga o'ralgan ko'mirda pishgan mazali kabob",
-    videoUrl: "videos/orama-fire-shashlik.mp4"
+    videoUrl: "videos/lavash-rulet.mp4"
   },
   {
     id: "sh-29",
@@ -202,7 +202,7 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 35000,
     desc: "Maxsus kesimdagi eng sara go'shtdan tayyorlangan premium shashlik",
-    videoUrl: "videos/torghamchi-shashlik.mp4"
+    videoUrl: "videos/dollar.mp4"
   },
   {
     id: "sh-30",
@@ -242,7 +242,7 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 25000,
     desc: "Qo'y qovurg'asidan tayyorlangan qarsildoq qovurma shashlik",
-    videoUrl: "videos/biqin-qoy.mp4"
+    videoUrl: "videos/qovurga.mp4"
   },
   {
     id: "sh-34",
@@ -252,7 +252,7 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 25000,
     desc: "Xushbo'y dumba bilan boyitilgan mayin to'rg'amchi lahm",
-    videoUrl: "videos/torghamchi-shashlik.mp4"
+    videoUrl: "videos/torghamchi-yogl-34.mp4"
   },
   {
     id: "sh-35",

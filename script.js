@@ -335,8 +335,7 @@ MENU_DATA.forEach((item, idx) => {
 // =============================================================================
 const STATE = {
   currentCategory: "all",
-  searchQuery: "",
-  snapshots: {}
+  searchQuery: ""
 };
 
 // =============================================================================
@@ -404,346 +403,10 @@ function burstPlateSparks(rect) {
 }
 
 // =============================================================================
-// 4. Three.js 3D Card Snapshots Engine
+// 4. Modal Open & Close Logic
 // =============================================================================
 
-/**
- * Generates high-definition 3D rendered thumbnails for each menu item
- * using an offscreen Three.js WebGL renderer
- */
-function init3DCardSnapshots() {
-  if (typeof window === "undefined" || !window.THREE || !window.Food3D) return;
-
-  try {
-    const width = 360;
-    const height = 240;
-    const offscreenCanvas = document.createElement("canvas");
-    offscreenCanvas.width = width;
-    offscreenCanvas.height = height;
-
-    const renderer = new THREE.WebGLRenderer({
-      canvas: offscreenCanvas,
-      alpha: true,
-      antialias: true,
-      preserveDrawingBuffer: true
-    });
-    renderer.setSize(width, height, false);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-    renderer.shadowMap.enabled = true;
-
-    const scene = new THREE.Scene();
-
-    const camera = new THREE.PerspectiveCamera(38, width / height, 0.1, 50);
-    camera.position.set(0, 2.3, 3.6);
-    camera.lookAt(0, 0.15, 0);
-
-    // Warm Restaurant Lighting
-    const ambLight = new THREE.AmbientLight(0xffffff, 0.85);
-    scene.add(ambLight);
-
-    const keyLight = new THREE.DirectionalLight(0xfff5e6, 1.25);
-    keyLight.position.set(2.5, 4.5, 3);
-    keyLight.castShadow = true;
-    scene.add(keyLight);
-
-    const emberLight = new THREE.PointLight(0xff4500, 1.8, 8);
-    emberLight.position.set(0, -0.4, 0);
-    scene.add(emberLight);
-
-    const rimLight = new THREE.DirectionalLight(0x80d8ff, 0.65);
-    rimLight.position.set(-3, 2, -2);
-    scene.add(rimLight);
-
-    // Render snapshot for each menu item
-    MENU_DATA.forEach(item => {
-      const model = Food3D.createDish3DModel(item);
-      scene.add(model);
-
-      renderer.render(scene, camera);
-      const dataUrl = offscreenCanvas.toDataURL("image/png");
-      STATE.snapshots[item.id] = dataUrl;
-
-      scene.remove(model);
-    });
-
-    // Clean up offscreen renderer
-    renderer.dispose();
-
-    // Update rendered card images if grid already in DOM
-    document.querySelectorAll(".dish-3d-thumb").forEach(img => {
-      const card = img.closest(".menu-card");
-      if (card) {
-        const id = card.getAttribute("data-id");
-        if (id && STATE.snapshots[id]) {
-          img.src = STATE.snapshots[id];
-        }
-      }
-    });
-  } catch (err) {
-    console.warn("Could not generate offscreen 3D snapshots:", err);
-  }
-}
-
-// =============================================================================
-// 5. Interactive Three.js 3D Spotlight Modal Viewer
-// =============================================================================
-
-let modal3DScene = null;
-let modal3DCamera = null;
-let modal3DRenderer = null;
-let modal3DControls = null;
-let currentModalModel = null;
-let modalSteamParticles = null;
-let modalAnimFrameId = null;
-let isModalAutoRotating = true;
-
-function init3DModalViewer() {
-  if (typeof window === "undefined" || !window.THREE) return;
-
-  const canvas = document.getElementById("dishModal3DCanvas");
-  const stage = document.getElementById("dishModalStageWrap");
-  if (!canvas || !stage) return;
-
-  modal3DScene = new THREE.Scene();
-
-  const width = stage.clientWidth || 400;
-  const height = stage.clientHeight || 300;
-
-  modal3DCamera = new THREE.PerspectiveCamera(40, width / height, 0.1, 100);
-  modal3DCamera.position.set(0, 2.3, 3.8);
-  modal3DCamera.lookAt(0, 0.15, 0);
-
-  modal3DRenderer = new THREE.WebGLRenderer({
-    canvas: canvas,
-    alpha: true,
-    antialias: true
-  });
-  modal3DRenderer.setSize(width, height, false);
-  modal3DRenderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-  modal3DRenderer.shadowMap.enabled = true;
-
-  // OrbitControls
-  if (THREE.OrbitControls) {
-    modal3DControls = new THREE.OrbitControls(modal3DCamera, canvas);
-    modal3DControls.enableDamping = true;
-    modal3DControls.dampingFactor = 0.06;
-    modal3DControls.minDistance = 2.0;
-    modal3DControls.maxDistance = 6.0;
-    modal3DControls.maxPolarAngle = Math.PI / 2 + 0.12; // Prevent going underneath platter
-    modal3DControls.autoRotate = isModalAutoRotating;
-    modal3DControls.autoRotateSpeed = 2.0;
-    modal3DControls.target.set(0, 0.15, 0);
-  }
-
-  // Lighting
-  const ambLight = new THREE.AmbientLight(0xffffff, 0.8);
-  modal3DScene.add(ambLight);
-
-  const keyLight = new THREE.DirectionalLight(0xffecd2, 1.3);
-  keyLight.position.set(2.5, 4.5, 3);
-  keyLight.castShadow = true;
-  modal3DScene.add(keyLight);
-
-  const emberLight = new THREE.PointLight(0xff4500, 2.0, 8);
-  emberLight.position.set(0, -0.4, 0);
-  modal3DScene.add(emberLight);
-
-  const rimLight = new THREE.DirectionalLight(0x80d8ff, 0.7);
-  rimLight.position.set(-3, 2, -2);
-  modal3DScene.add(rimLight);
-
-  // 3D Rising Steam Particles
-  const steamCount = 35;
-  const steamGeo = new THREE.BufferGeometry();
-  const steamPositions = new Float32Array(steamCount * 3);
-  const steamSpeeds = new Float32Array(steamCount);
-
-  for (let i = 0; i < steamCount; i++) {
-    steamPositions[i * 3] = (Math.random() - 0.5) * 1.4;
-    steamPositions[i * 3 + 1] = 0.2 + Math.random() * 1.5;
-    steamPositions[i * 3 + 2] = (Math.random() - 0.5) * 0.9;
-    steamSpeeds[i] = 0.008 + Math.random() * 0.012;
-  }
-
-  steamGeo.setAttribute("position", new THREE.BufferAttribute(steamPositions, 3));
-  const steamMat = new THREE.PointsMaterial({
-    color: 0xffffff,
-    size: 0.12,
-    transparent: true,
-    opacity: 0.35
-  });
-
-  modalSteamParticles = new THREE.Points(steamGeo, steamMat);
-  modalSteamParticles.userData = { speeds: steamSpeeds };
-  modal3DScene.add(modalSteamParticles);
-
-  // Auto-Rotate Button toggle
-  const toggleBtn = document.getElementById("toggle3DRotateBtn");
-  const rotateLabel = document.getElementById("rotateBtnLabel");
-  if (toggleBtn) {
-    toggleBtn.addEventListener("click", () => {
-      isModalAutoRotating = !isModalAutoRotating;
-      if (modal3DControls) {
-        modal3DControls.autoRotate = isModalAutoRotating;
-      }
-      toggleBtn.classList.toggle("active", isModalAutoRotating);
-      if (rotateLabel) {
-        rotateLabel.textContent = isModalAutoRotating ? "Aylanish" : "To'xtatilgan";
-      }
-    });
-  }
-
-  // Camera Reset Button
-  const resetBtn = document.getElementById("reset3DCameraBtn");
-  if (resetBtn) {
-    resetBtn.addEventListener("click", () => {
-      if (modal3DCamera && modal3DControls) {
-        modal3DCamera.position.set(0, 2.3, 3.8);
-        modal3DControls.target.set(0, 0.15, 0);
-        modal3DControls.update();
-      }
-    });
-  }
-
-  // Media Switcher Buttons (3D vs Video)
-  const btn3D = document.getElementById("btnMedia3D");
-  const btnVid = document.getElementById("btnMediaVideo");
-  if (btn3D) {
-    btn3D.addEventListener("click", () => switchModalMedia("3d"));
-  }
-  if (btnVid) {
-    btnVid.addEventListener("click", () => switchModalMedia("video"));
-  }
-
-  // Resize listener
-  window.addEventListener("resize", onModal3DResize);
-}
-
-let currentModalMediaMode = "3d";
-
-function switchModalMedia(mode) {
-  currentModalMediaMode = mode;
-  const btn3D = document.getElementById("btnMedia3D");
-  const btnVid = document.getElementById("btnMediaVideo");
-  const canvas = document.getElementById("dishModal3DCanvas");
-  const vidContainer = document.getElementById("dishModalVideoContainer");
-  const vidElem = document.getElementById("dishModalVideo");
-  const controlsOverlay = document.getElementById("dish3DControlsOverlay");
-  const dragHint = document.getElementById("dishDragHint");
-  const liveTag = document.getElementById("modal3DLiveTag");
-
-  if (mode === "video") {
-    if (btn3D) btn3D.classList.remove("active");
-    if (btnVid) btnVid.classList.add("active");
-    if (canvas) canvas.style.display = "none";
-    if (controlsOverlay) controlsOverlay.style.display = "none";
-    if (dragHint) dragHint.style.display = "none";
-    if (liveTag) liveTag.style.display = "none";
-    if (vidContainer) vidContainer.style.display = "flex";
-    if (vidElem) {
-      vidElem.currentTime = 0;
-      vidElem.play().catch(() => {});
-    }
-    pauseModal3DAnimation();
-  } else {
-    if (btnVid) btnVid.classList.remove("active");
-    if (btn3D) btn3D.classList.add("active");
-    if (vidContainer) vidContainer.style.display = "none";
-    if (vidElem) vidElem.pause();
-    if (canvas) canvas.style.display = "block";
-    if (controlsOverlay) controlsOverlay.style.display = "flex";
-    if (dragHint) dragHint.style.display = "flex";
-    const mediaTabs = document.getElementById("dishModalMediaTabs");
-    if (liveTag) {
-      liveTag.style.display = (mediaTabs && mediaTabs.style.display !== "none") ? "none" : "inline-flex";
-    }
-    onModal3DResize();
-    startModal3DAnimation();
-  }
-}
-
-function onModal3DResize() {
-  const stage = document.getElementById("dishModalStageWrap");
-  if (!stage || !modal3DRenderer || !modal3DCamera) return;
-
-  const width = stage.clientWidth;
-  const height = stage.clientHeight;
-  if (width === 0 || height === 0) return;
-
-  modal3DCamera.aspect = width / height;
-  modal3DCamera.updateProjectionMatrix();
-  modal3DRenderer.setSize(width, height, false);
-}
-
-function loadDishInto3DModal(item) {
-  if (!modal3DScene || !window.Food3D) return;
-
-  if (currentModalModel) {
-    modal3DScene.remove(currentModalModel);
-    currentModalModel = null;
-  }
-
-  currentModalModel = Food3D.createDish3DModel(item);
-  modal3DScene.add(currentModalModel);
-
-  // Reset controls to optimal camera angle
-  if (modal3DCamera && modal3DControls) {
-    modal3DCamera.position.set(0, 2.3, 3.8);
-    modal3DControls.target.set(0, 0.15, 0);
-    modal3DControls.update();
-  }
-}
-
-function startModal3DAnimation() {
-  if (modalAnimFrameId) cancelAnimationFrame(modalAnimFrameId);
-
-  function animate() {
-    modalAnimFrameId = requestAnimationFrame(animate);
-
-    if (modal3DControls) {
-      modal3DControls.update();
-    }
-
-    // Animate 3D rising steam particles
-    if (modalSteamParticles) {
-      const positions = modalSteamParticles.geometry.attributes.position.array;
-      const speeds = modalSteamParticles.userData.speeds;
-      const count = positions.length / 3;
-
-      for (let i = 0; i < count; i++) {
-        positions[i * 3 + 1] += speeds[i];
-        // Swirl horizontally
-        positions[i * 3] += Math.sin(positions[i * 3 + 1] * 3.5) * 0.003;
-
-        if (positions[i * 3 + 1] > 2.0) {
-          positions[i * 3 + 1] = 0.2;
-          positions[i * 3] = (Math.random() - 0.5) * 1.4;
-          positions[i * 3 + 2] = (Math.random() - 0.5) * 0.9;
-        }
-      }
-      modalSteamParticles.geometry.attributes.position.needsUpdate = true;
-    }
-
-    if (modal3DRenderer && modal3DScene && modal3DCamera) {
-      modal3DRenderer.render(modal3DScene, modal3DCamera);
-    }
-  }
-
-  animate();
-}
-
-function pauseModal3DAnimation() {
-  if (modalAnimFrameId) {
-    cancelAnimationFrame(modalAnimFrameId);
-    modalAnimFrameId = null;
-  }
-}
-
-// =============================================================================
-// 6. Modal Open & Close Logic
-// =============================================================================
-
-function openDishModal(itemId, event = null, initialMode = "3d") {
+function openDishModal(itemId, event = null) {
   if (typeof document === "undefined") return;
   const item = MENU_DATA.find(i => i.id === itemId);
   if (!item) return;
@@ -764,7 +427,6 @@ function openDishModal(itemId, event = null, initialMode = "3d") {
   const price = document.getElementById("dishModalPrice");
   const priceUSD = document.getElementById("dishModalPriceUSD");
   const desc = document.getElementById("dishModalDesc");
-  const mediaTabs = document.getElementById("dishModalMediaTabs");
   const videoBadge = document.getElementById("dishModalVideoBadge");
   const flowBox = document.getElementById("dishModalFlowBox");
   const flowLink = document.getElementById("dishModalFlowLink");
@@ -784,12 +446,9 @@ function openDishModal(itemId, event = null, initialMode = "3d") {
   if (priceUSD) priceUSD.textContent = formatUSD(item.price);
   if (desc) desc.textContent = item.desc;
 
-  // Configure video assets if dish has an authentic video
-  const liveTag = document.getElementById("modal3DLiveTag");
+  // Configure video assets
   if (item.videoUrl) {
-    if (mediaTabs) mediaTabs.style.display = "flex";
     if (videoBadge) videoBadge.style.display = "inline-flex";
-    if (liveTag) liveTag.style.display = "none";
     if (flowBox) {
       if (flowLink && item.videoSharedUrl) {
         flowLink.href = item.videoSharedUrl;
@@ -800,11 +459,10 @@ function openDishModal(itemId, event = null, initialMode = "3d") {
     }
     if (vidElem) {
       vidElem.src = item.videoUrl;
+      vidElem.currentTime = 0;
     }
   } else {
-    if (mediaTabs) mediaTabs.style.display = "none";
     if (videoBadge) videoBadge.style.display = "none";
-    if (liveTag) liveTag.style.display = "inline-flex";
     if (flowBox) flowBox.style.display = "none";
     if (vidElem) {
       vidElem.pause();
@@ -812,9 +470,6 @@ function openDishModal(itemId, event = null, initialMode = "3d") {
       vidElem.load();
     }
   }
-
-  // Load matching 3D Model into the Three.js viewport
-  loadDishInto3DModal(item);
 
   if (modal && backdrop) {
     backdrop.style.display = "block";
@@ -824,14 +479,11 @@ function openDishModal(itemId, event = null, initialMode = "3d") {
     modal.classList.add("show");
     document.body.style.overflow = "hidden";
 
-    // Set view mode once modal is visible
-    setTimeout(() => {
-      if (item.videoUrl && initialMode === "video") {
-        switchModalMedia("video");
-      } else {
-        switchModalMedia("3d");
-      }
-    }, 40);
+    if (vidElem && item.videoUrl) {
+      setTimeout(() => {
+        vidElem.play().catch(() => {});
+      }, 40);
+    }
   }
 }
 
@@ -840,7 +492,6 @@ function closeDishModal() {
   const backdrop = document.getElementById("dishModalBackdrop");
   const vidElem = document.getElementById("dishModalVideo");
 
-  pauseModal3DAnimation();
   if (vidElem) {
     vidElem.pause();
   }
@@ -864,7 +515,6 @@ function closeDishModal() {
 if (typeof window !== "undefined") {
   window.openDishModal = openDishModal;
   window.closeDishModal = closeDishModal;
-  window.switchModalMedia = switchModalMedia;
 }
 
 // =============================================================================
@@ -954,12 +604,11 @@ function renderMenuGrid() {
     else if (item.id === "choy-kok") highlightBadge = `<span class="card-badge-tag tag-hit">🌿 Milliy</span>`;
 
     const videoBadge = item.videoUrl ? `<span class="card-badge-tag tag-video">🎬 Video</span>` : "";
-    const snapshotSrc = STATE.snapshots[item.id] || "";
     const seekTime = item.randomSeekTime || "1.5";
 
-    const showcaseHtml = item.videoUrl ? `
+    const showcaseHtml = `
       <!-- Live Video Random Frame Showcase -->
-      <div class="card-dish-showcase" title="3D & Jonli video ko'rish uchun bosing">
+      <div class="card-dish-showcase" title="Jonli video ko'rish uchun bosing">
         <div class="dish-glow-aura"></div>
         <div class="dish-video-frame-container">
           <video class="dish-card-video" src="${item.videoUrl}#t=${seekTime}" data-seek="${seekTime}" preload="metadata" muted playsinline loop></video>
@@ -974,26 +623,10 @@ function renderMenuGrid() {
           </div>
         </div>
       </div>
-    ` : `
-      <!-- 3D Interactive Food Dish Showcase -->
-      <div class="card-dish-showcase" title="3D ko'rish uchun bosing">
-        <div class="dish-glow-aura"></div>
-        <div class="dish-stage-3d">
-          <div class="dish-plate-container">
-            <img class="dish-3d-thumb" src="${snapshotSrc}" alt="${item.name}" loading="lazy">
-            <div class="dish-steam-fx">
-              <span class="steam-curl"></span>
-              <span class="steam-curl"></span>
-              <span class="steam-curl"></span>
-            </div>
-          </div>
-          <div class="dish-ambient-shadow"></div>
-        </div>
-      </div>
     `;
 
     return `
-      <article class="menu-card" data-id="${item.id}" onclick="openDishModal('${item.id}', event, '3d')">
+      <article class="menu-card" data-id="${item.id}" onclick="openDishModal('${item.id}', event)">
         <div class="card-watermark">${watermark}</div>
         <div class="card-ambient-beam"></div>
 
@@ -1018,23 +651,12 @@ function renderMenuGrid() {
           </div>
         </div>
         <div class="card-action-bar">
-          <button class="btn-view-dish" type="button" onclick="event.stopPropagation(); openDishModal('${item.id}', event, '3d')" aria-label="${item.name} 3D ko'rish">
-            <div class="btn-icon-spin">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
-              </svg>
-            </div>
-            <span>3D Ko'rish</span>
-            <span class="btn-live-spark"></span>
-          </button>
-          ${item.videoUrl ? `
-          <button class="btn-card-video" type="button" onclick="event.stopPropagation(); openDishModal('${item.id}', event, 'video')" aria-label="${item.name} jonli video" title="Jonli HD videoni ko'rish">
+          <button class="btn-card-video" style="width: 100%;" type="button" onclick="event.stopPropagation(); openDishModal('${item.id}', event)" aria-label="${item.name} jonli video" title="Jonli HD videoni ko'rish">
             <svg viewBox="0 0 24 24" fill="currentColor">
               <polygon points="6 4 20 12 6 20 6 4"/>
             </svg>
-            <span>Video</span>
+            <span>Videoni Ko'rish</span>
           </button>
-          ` : ''}
         </div>
       </article>
     `;
@@ -1279,12 +901,6 @@ function initApp() {
   updateCategoryCounts();
   renderMenuGrid();
   initCardParallax();
-
-  // Initialize Three.js 3D System
-  if (typeof window !== "undefined" && window.THREE) {
-    init3DCardSnapshots();
-    init3DModalViewer();
-  }
 
   // Search input with debounce
   const searchInput = document.getElementById("searchInput");

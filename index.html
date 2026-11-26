@@ -14,6 +14,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Live Animated Charcoal Ember Background -->
+  <canvas id="emberBgCanvas" class="ember-bg-canvas"></canvas>
+  <div class="bg-grid-mesh"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
   <!-- Background Glow & Ambience -->
   <div class="ambient-glow glow-top"></div>
   <div class="ambient-glow glow-bottom"></div>
@@ -51,6 +56,41 @@
     </div>
   </header>
 
+  <!-- Hero Lounge Banner -->
+  <section class="hero-showcase">
+    <div class="container hero-container">
+      <div class="hero-badge">
+        <span class="pulsing-ember"></span>
+        <span class="hero-badge-text">🔥 Jonli Mangal Tafti • 3D Interaktiv Portal</span>
+      </div>
+      <h1 class="hero-headline">Haqiqiy Mangal <span class="text-gradient">Cho'g'i & Tafti</span></h1>
+      <p class="hero-subtext">Saralangan 100% halol go'sht, an'anaviy sirli marinadlar va olovli shashliklar to'plami. Har bir taomni buyurtma qilishdan oldin 3D formatda 360° burchakdan erkin tomosha qiling.</p>
+      
+      <!-- Live Metrics Ticker -->
+      <div class="hero-stats-row">
+        <div class="stat-pill">
+          <span class="stat-val">850°C</span>
+          <span class="stat-lbl">Cho'g' Tafti</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-pill">
+          <span class="stat-val">30 Xil</span>
+          <span class="stat-lbl">Sara Taomlar</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-pill">
+          <span class="stat-val">360°</span>
+          <span class="stat-lbl">Real 3D</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-pill">
+          <span class="stat-val">100%</span>
+          <span class="stat-lbl">Halol Go'sht</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Sticky Controls: Search and Tabs -->
   <section class="controls-section">
     <div class="container">
@@ -67,6 +107,7 @@
           placeholder="Taom nomi yoki raqami (masalan: 11, qiyma, kavkaz)..." 
           autocomplete="off"
         >
+        <kbd class="search-kbd-hint" title="Tezkor qidirish uchun / tugmasini bosing">/</kbd>
         <button id="clearSearchBtn" class="clear-search-btn" aria-label="Qidiruvni tozalash" style="display: none;">
           ✕
         </button>
@@ -75,19 +116,19 @@
       <!-- Category Filter Tabs -->
       <nav class="category-tabs" aria-label="Menyu toifalari">
         <button class="tab-btn active" data-category="all">
-          <span class="tab-label">Barchasi</span>
+          <span class="tab-label">✨ Barchasi</span>
           <span class="tab-count" id="countAll">0</span>
         </button>
         <button class="tab-btn" data-category="shashlik">
-          <span class="tab-label">Shashlik & Kabob (№ 1–36)</span>
+          <span class="tab-label">🍢 Shashlik & Kabob</span>
           <span class="tab-count" id="countShashlik">0</span>
         </button>
         <button class="tab-btn" data-category="non">
-          <span class="tab-label">Non</span>
+          <span class="tab-label">🫓 Non</span>
           <span class="tab-count" id="countNon">0</span>
         </button>
         <button class="tab-btn" data-category="choy">
-          <span class="tab-label">Choy</span>
+          <span class="tab-label">🫖 Choy</span>
           <span class="tab-count" id="countChoy">0</span>
         </button>
       </nav>
@@ -137,9 +178,39 @@
     <div class="dish-modal-content">
       <!-- 3D Interactive WebGL Stage with 360 OrbitControls -->
       <div class="dish-modal-stage-wrap" id="dishModalStageWrap">
+        <!-- Media Mode Switcher (3D vs Live Video) -->
+        <div id="dishModalMediaTabs" class="dish-modal-media-tabs" style="display: none;">
+          <button id="btnMedia3D" class="modal-tab-pill active" type="button" title="3D Model ko'rish">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            </svg>
+            <span>3D Model</span>
+          </button>
+          <button id="btnMediaVideo" class="modal-tab-pill" type="button" title="Jonli HD videoni ko'rish">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+            <span>Jonli Video</span>
+          </button>
+        </div>
+
         <div class="dish-modal-glow"></div>
+        <div class="modal-3d-live-tag" id="modal3DLiveTag">
+          <span class="live-dot"></span>
+          <span>REAL-TIME 3D</span>
+        </div>
         <canvas id="dishModal3DCanvas" class="dish-modal-3d-canvas"></canvas>
-        <div class="dish-3d-controls-overlay">
+
+        <!-- Video Player Stage -->
+        <div id="dishModalVideoContainer" class="dish-modal-video-container" style="display: none;">
+          <video id="dishModalVideo" class="dish-modal-video" loop playsinline controls preload="auto"></video>
+          <div class="modal-video-overlay-badge">
+            <span class="live-dot green-dot"></span>
+            <span>GOOGLE FLOW • HD CINEMA</span>
+          </div>
+        </div>
+
+        <div class="dish-3d-controls-overlay" id="dish3DControlsOverlay">
           <button id="toggle3DRotateBtn" class="btn-3d-control active" type="button" title="Avtomatik aylanishni yoqish / o'chirish">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
@@ -154,7 +225,7 @@
             <span>Qaytarish</span>
           </button>
         </div>
-        <div class="dish-drag-hint">
+        <div class="dish-drag-hint" id="dishDragHint">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M7 16l-4-4 4-4M17 8l4 4-4 4M3 12h18"/>
           </svg>
@@ -168,6 +239,7 @@
           <span id="dishModalNumber" class="item-num-badge">№ 11</span>
           <span id="dishModalCategory" class="category-pill">Shashlik</span>
           <span class="badge-flame">🔥 Olovda pishgan</span>
+          <span id="dishModalVideoBadge" class="card-badge-tag tag-video" style="display: none;">🎬 Jonli Video</span>
         </div>
         <h2 id="dishModalTitle" class="dish-modal-title">Dubayski qiyma</h2>
         <div class="dish-modal-price-wrap">
@@ -189,6 +261,17 @@
             <span class="feature-icon">🔥</span>
             <span class="feature-text">Qaynoq ko'mir cho'g'ida yangi pishiriladi</span>
           </div>
+        </div>
+
+        <div id="dishModalFlowBox" class="dish-modal-flow-box" style="display: none;">
+          <a id="dishModalFlowLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-flow-external">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+            <span>Google Flow sahifasida ochish</span>
+          </a>
         </div>
       </div>
     </div>

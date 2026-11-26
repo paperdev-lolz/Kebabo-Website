@@ -21,7 +21,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 18000,
-    desc: "Maxsus marinadlangan sershira qiyma kabob"
+    desc: "Maxsus marinadlangan sershira qiyma kabob",
+    videoUrl: "videos/qiyma-shashlik.mp4"
   },
   {
     id: "sh-12",
@@ -30,7 +31,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 15000,
-    desc: "Klassik an'anaviy mayin qiyma shashlik"
+    desc: "Klassik an'anaviy mayin qiyma shashlik",
+    videoUrl: "videos/qiyma-shashlik.mp4"
   },
   {
     id: "sh-14",
@@ -39,7 +41,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 18000,
-    desc: "Buxoroning mashhur G`ijdivon uslubidagi shirali qiyma"
+    desc: "Buxoroning mashhur G`ijdivon uslubidagi shirali qiyma",
+    videoUrl: "videos/qiyma-shashlik.mp4"
   },
   {
     id: "sh-15",
@@ -48,7 +51,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 22000,
-    desc: "Issiq ko'mirda erib turuvchi nozik Mozzarella pishloqli qiyma"
+    desc: "Issiq ko'mirda erib turuvchi nozik Mozzarella pishloqli qiyma",
+    videoUrl: "videos/qiyma-shashlik.mp4"
   },
   {
     id: "sh-22",
@@ -57,7 +61,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 18000,
-    desc: "Xushbo'y yangi sabzavotlar va ziravorlar uyg'unligi"
+    desc: "Xushbo'y yangi sabzavotlar va ziravorlar uyg'unligi",
+    videoUrl: "videos/qiyma-shashlik.mp4"
   },
   {
     id: "sh-23",
@@ -66,7 +71,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 18000,
-    desc: "O'tkir qizil qalampir va sharq ziravorlari bilan olovli kabob"
+    desc: "O'tkir qizil qalampir va sharq ziravorlari bilan olovli kabob",
+    videoUrl: "videos/qiyma-shashlik.mp4"
   },
   {
     id: "sh-25",
@@ -75,7 +81,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 20000,
-    desc: "Usta oshpazning maxsus retsepti asosidagi saralangan go'sht"
+    desc: "Usta oshpazning maxsus retsepti asosidagi saralangan go'sht",
+    videoUrl: "videos/qiyma-shashlik.mp4"
   },
   {
     id: "sh-16",
@@ -84,7 +91,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 16000,
-    desc: "Qarsildoq qovurilgan tovuq go'shti (qanot yoki son qismi)"
+    desc: "Qarsildoq qovurilgan tovuq go'shti (qanot yoki son qismi)",
+    videoUrl: "videos/tovuq-shashlik.mp4"
   },
   {
     id: "sh-17",
@@ -93,7 +101,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 24000,
-    desc: "Saralangan, toza yog'siz lahm go'sht bo'laklari"
+    desc: "Saralangan, toza yog'siz lahm go'sht bo'laklari",
+    videoUrl: "videos/torghamchi-shashlik.mp4"
   },
   {
     id: "sh-19",
@@ -102,7 +111,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 22000,
-    desc: "Mayin lahm go'sht va xushbo'y dumba yog'ining shirali kombinatsiyasi"
+    desc: "Mayin lahm go'sht va xushbo'y dumba yog'ining shirali kombinatsiyasi",
+    videoUrl: "videos/torghamchi-shashlik.mp4"
   },
   {
     id: "sh-18",
@@ -111,7 +121,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 30000,
-    desc: "Kavkazcha usulda marinadlangan yirik mol go'shti lahm bo'laklari"
+    desc: "Kavkazcha usulda marinadlangan yirik mol go'shti lahm bo'laklari",
+    videoUrl: "videos/torghamchi-shashlik.mp4"
   },
   {
     id: "sh-36",
@@ -120,7 +131,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 33000,
-    desc: "Hosilador qo'zichoq go'shti va an'anaviy xushbo'y tog' giyohlari"
+    desc: "Hosilador qo'zichoq go'shti va an'anaviy xushbo'y tog' giyohlari",
+    videoUrl: "videos/torghamchi-shashlik.mp4"
   },
   {
     id: "sh-21",
@@ -129,7 +141,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 24000,
-    desc: "Press ostida qarsildoq qilib qovurilgan sarxil jo'ja tabaka"
+    desc: "Press ostida qarsildoq qilib qovurilgan sarxil jo'ja tabaka",
+    videoUrl: "videos/tovuq-shashlik.mp4"
   },
   {
     id: "sh-20",
@@ -138,7 +151,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 22000,
-    desc: "Marvariddek tizilgan shirali, qiyma va lahm qismli nozik kabob"
+    desc: "Marvariddek tizilgan shirali, qiyma va lahm qismli nozik kabob",
+    videoUrl: "videos/qiyma-shashlik.mp4"
   },
   {
     id: "sh-nap",
@@ -147,7 +161,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 23000,
-    desc: "Go'sht va mayin dumba qatlamlarining go'zal qavatli simfoniyasi"
+    desc: "Go'sht va mayin dumba qatlamlarining go'zal qavatli simfoniyasi",
+    videoUrl: "videos/dumba-shashlik.mp4"
   },
   {
     id: "sh-26",
@@ -156,7 +171,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 22000,
-    desc: "Yupqa tilim lahm go'shtning xushbo'y dumba bilan o'ralgan varianti"
+    desc: "Yupqa tilim lahm go'shtning xushbo'y dumba bilan o'ralgan varianti",
+    videoUrl: "videos/orama-fire-shashlik.mp4"
   },
   {
     id: "sh-2",
@@ -165,7 +181,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 14000,
-    desc: "Yengil, parhezbop va sershira tovuq filesi shashligi"
+    desc: "Yengil, parhezbop va sershira tovuq filesi shashligi",
+    videoUrl: "videos/tovuq-shashlik.mp4"
   },
   {
     id: "sh-28",
@@ -174,7 +191,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 23000,
-    desc: "Yupqa qarsildoq lavashga o'ralgan ko'mirda pishgan mazali kabob"
+    desc: "Yupqa qarsildoq lavashga o'ralgan ko'mirda pishgan mazali kabob",
+    videoUrl: "videos/orama-fire-shashlik.mp4"
   },
   {
     id: "sh-29",
@@ -183,7 +201,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 35000,
-    desc: "Maxsus kesimdagi eng sara go'shtdan tayyorlangan premium shashlik"
+    desc: "Maxsus kesimdagi eng sara go'shtdan tayyorlangan premium shashlik",
+    videoUrl: "videos/torghamchi-shashlik.mp4"
   },
   {
     id: "sh-30",
@@ -192,7 +211,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 18000,
-    desc: "Tandirda mayin dumba pardasiga o'ralib pishirilgan jigar shashlik"
+    desc: "Tandirda mayin dumba pardasiga o'ralib pishirilgan jigar shashlik",
+    videoUrl: "videos/jigar-shashlik.mp4"
   },
   {
     id: "sh-31",
@@ -201,7 +221,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 12000,
-    desc: "Yangi tandir nonining issiq bag'rida tortiladigan sershira qiyma"
+    desc: "Yangi tandir nonining issiq bag'rida tortiladigan sershira qiyma",
+    videoUrl: "videos/non-kabob.mp4"
   },
   {
     id: "sh-32",
@@ -210,7 +231,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 28000,
-    desc: "Qo'y go'shtining eng shirin biqin qismidan tayyorlangan kachalka"
+    desc: "Qo'y go'shtining eng shirin biqin qismidan tayyorlangan kachalka",
+    videoUrl: "videos/biqin-qoy.mp4"
   },
   {
     id: "sh-33",
@@ -219,7 +241,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 25000,
-    desc: "Qo'y qovurg'asidan tayyorlangan qarsildoq qovurma shashlik"
+    desc: "Qo'y qovurg'asidan tayyorlangan qarsildoq qovurma shashlik",
+    videoUrl: "videos/biqin-qoy.mp4"
   },
   {
     id: "sh-34",
@@ -228,7 +251,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 25000,
-    desc: "Xushbo'y dumba bilan boyitilgan mayin to'rg'amchi lahm"
+    desc: "Xushbo'y dumba bilan boyitilgan mayin to'rg'amchi lahm",
+    videoUrl: "videos/torghamchi-shashlik.mp4"
   },
   {
     id: "sh-35",
@@ -237,7 +261,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 22000,
-    desc: "100% sara qo'y go'shti va dumbasidan tayyorlangan asl qiyma"
+    desc: "100% sara qo'y go'shti va dumbasidan tayyorlangan asl qiyma",
+    videoUrl: "videos/qoy-goshti-qiyma.mp4"
   },
   {
     id: "sh-1",
@@ -246,7 +271,8 @@ const MENU_DATA = [
     category: "shashlik",
     categoryLabel: "Shashlik",
     price: 16000,
-    desc: "Mangalda tillarang tusda pishirilgan qarsildoq dumba kabob"
+    desc: "Mangalda tillarang tusda pishirilgan qarsildoq dumba kabob",
+    videoUrl: "videos/dumba-shashlik.mp4"
   },
 
   // --- NON ---
@@ -257,7 +283,9 @@ const MENU_DATA = [
     category: "non",
     categoryLabel: "Non",
     price: 3000,
-    desc: "Tandirdan uzilgan issiq va mayin patir non (yarim bo'lak)"
+    desc: "Tandirdan uzilgan issiq va mayin patir non (yarim bo'lak)",
+    videoUrl: "videos/non-yarim.mp4",
+    videoSharedUrl: "https://flow.google.com/shared/video/442c0b26-9313-4ebd-8881-744927cd9d86"
   },
   {
     id: "non-butun",
@@ -266,7 +294,9 @@ const MENU_DATA = [
     category: "non",
     categoryLabel: "Non",
     price: 5000,
-    desc: "Tandirdan yangi uzilgan barra patir non (butun)"
+    desc: "Tandirdan yangi uzilgan barra patir non (butun)",
+    videoUrl: "videos/non-butun.mp4",
+    videoSharedUrl: "https://flow.google.com/shared/video/51abbd78-66c0-41a8-ac37-25b8bc08c206"
   },
 
   // --- CHOY ---
@@ -277,7 +307,8 @@ const MENU_DATA = [
     category: "choy",
     categoryLabel: "Choy",
     price: 3000,
-    desc: "Xushbo'y damlangan milliy ko'k choy (chinni choynakda)"
+    desc: "Xushbo'y damlangan milliy ko'k choy (chinni choynakda)",
+    videoUrl: "videos/kok-choy.mp4"
   },
   {
     id: "choy-qora",
@@ -286,9 +317,18 @@ const MENU_DATA = [
     category: "choy",
     categoryLabel: "Choy",
     price: 3000,
-    desc: "To'yingan quyuq qora choy (chinni choynakda)"
+    desc: "To'yingan quyuq qora choy (chinni choynakda)",
+    videoUrl: "videos/qora-choy.mp4"
   }
 ];
+
+// Assign a distinct random frame timestamp (0.7s to 3.4s) for each item with video
+MENU_DATA.forEach((item, idx) => {
+  if (item.videoUrl) {
+    const spread = (idx * 0.37 + (item.price % 11) * 0.17) % 2.7;
+    item.randomSeekTime = (0.7 + spread).toFixed(1);
+  }
+});
 
 // =============================================================================
 // 2. Application State
@@ -565,8 +605,61 @@ function init3DModalViewer() {
     });
   }
 
+  // Media Switcher Buttons (3D vs Video)
+  const btn3D = document.getElementById("btnMedia3D");
+  const btnVid = document.getElementById("btnMediaVideo");
+  if (btn3D) {
+    btn3D.addEventListener("click", () => switchModalMedia("3d"));
+  }
+  if (btnVid) {
+    btnVid.addEventListener("click", () => switchModalMedia("video"));
+  }
+
   // Resize listener
   window.addEventListener("resize", onModal3DResize);
+}
+
+let currentModalMediaMode = "3d";
+
+function switchModalMedia(mode) {
+  currentModalMediaMode = mode;
+  const btn3D = document.getElementById("btnMedia3D");
+  const btnVid = document.getElementById("btnMediaVideo");
+  const canvas = document.getElementById("dishModal3DCanvas");
+  const vidContainer = document.getElementById("dishModalVideoContainer");
+  const vidElem = document.getElementById("dishModalVideo");
+  const controlsOverlay = document.getElementById("dish3DControlsOverlay");
+  const dragHint = document.getElementById("dishDragHint");
+  const liveTag = document.getElementById("modal3DLiveTag");
+
+  if (mode === "video") {
+    if (btn3D) btn3D.classList.remove("active");
+    if (btnVid) btnVid.classList.add("active");
+    if (canvas) canvas.style.display = "none";
+    if (controlsOverlay) controlsOverlay.style.display = "none";
+    if (dragHint) dragHint.style.display = "none";
+    if (liveTag) liveTag.style.display = "none";
+    if (vidContainer) vidContainer.style.display = "flex";
+    if (vidElem) {
+      vidElem.currentTime = 0;
+      vidElem.play().catch(() => {});
+    }
+    pauseModal3DAnimation();
+  } else {
+    if (btnVid) btnVid.classList.remove("active");
+    if (btn3D) btn3D.classList.add("active");
+    if (vidContainer) vidContainer.style.display = "none";
+    if (vidElem) vidElem.pause();
+    if (canvas) canvas.style.display = "block";
+    if (controlsOverlay) controlsOverlay.style.display = "flex";
+    if (dragHint) dragHint.style.display = "flex";
+    const mediaTabs = document.getElementById("dishModalMediaTabs");
+    if (liveTag) {
+      liveTag.style.display = (mediaTabs && mediaTabs.style.display !== "none") ? "none" : "inline-flex";
+    }
+    onModal3DResize();
+    startModal3DAnimation();
+  }
 }
 
 function onModal3DResize() {
@@ -650,7 +743,7 @@ function pauseModal3DAnimation() {
 // 6. Modal Open & Close Logic
 // =============================================================================
 
-function openDishModal(itemId, event = null) {
+function openDishModal(itemId, event = null, initialMode = "3d") {
   if (typeof document === "undefined") return;
   const item = MENU_DATA.find(i => i.id === itemId);
   if (!item) return;
@@ -671,6 +764,11 @@ function openDishModal(itemId, event = null) {
   const price = document.getElementById("dishModalPrice");
   const priceUSD = document.getElementById("dishModalPriceUSD");
   const desc = document.getElementById("dishModalDesc");
+  const mediaTabs = document.getElementById("dishModalMediaTabs");
+  const videoBadge = document.getElementById("dishModalVideoBadge");
+  const flowBox = document.getElementById("dishModalFlowBox");
+  const flowLink = document.getElementById("dishModalFlowLink");
+  const vidElem = document.getElementById("dishModalVideo");
 
   if (title) title.textContent = item.name;
   if (number) {
@@ -686,6 +784,35 @@ function openDishModal(itemId, event = null) {
   if (priceUSD) priceUSD.textContent = formatUSD(item.price);
   if (desc) desc.textContent = item.desc;
 
+  // Configure video assets if dish has an authentic video
+  const liveTag = document.getElementById("modal3DLiveTag");
+  if (item.videoUrl) {
+    if (mediaTabs) mediaTabs.style.display = "flex";
+    if (videoBadge) videoBadge.style.display = "inline-flex";
+    if (liveTag) liveTag.style.display = "none";
+    if (flowBox) {
+      if (flowLink && item.videoSharedUrl) {
+        flowLink.href = item.videoSharedUrl;
+        flowBox.style.display = "block";
+      } else {
+        flowBox.style.display = "none";
+      }
+    }
+    if (vidElem) {
+      vidElem.src = item.videoUrl;
+    }
+  } else {
+    if (mediaTabs) mediaTabs.style.display = "none";
+    if (videoBadge) videoBadge.style.display = "none";
+    if (liveTag) liveTag.style.display = "inline-flex";
+    if (flowBox) flowBox.style.display = "none";
+    if (vidElem) {
+      vidElem.pause();
+      vidElem.removeAttribute("src");
+      vidElem.load();
+    }
+  }
+
   // Load matching 3D Model into the Three.js viewport
   loadDishInto3DModal(item);
 
@@ -697,19 +824,26 @@ function openDishModal(itemId, event = null) {
     modal.classList.add("show");
     document.body.style.overflow = "hidden";
 
-    // Adjust 3D canvas dimensions once visible
+    // Set view mode once modal is visible
     setTimeout(() => {
-      onModal3DResize();
-      startModal3DAnimation();
-    }, 50);
+      if (item.videoUrl && initialMode === "video") {
+        switchModalMedia("video");
+      } else {
+        switchModalMedia("3d");
+      }
+    }, 40);
   }
 }
 
 function closeDishModal() {
   const modal = document.getElementById("dishModal");
   const backdrop = document.getElementById("dishModalBackdrop");
+  const vidElem = document.getElementById("dishModalVideo");
 
   pauseModal3DAnimation();
+  if (vidElem) {
+    vidElem.pause();
+  }
 
   if (modal && backdrop) {
     backdrop.classList.remove("show");
@@ -718,6 +852,10 @@ function closeDishModal() {
       backdrop.style.display = "none";
       modal.style.display = "none";
       document.body.style.overflow = "";
+      if (vidElem) {
+        vidElem.removeAttribute("src");
+        vidElem.load();
+      }
     }, 280);
   }
 }
@@ -726,6 +864,7 @@ function closeDishModal() {
 if (typeof window !== "undefined") {
   window.openDishModal = openDishModal;
   window.closeDishModal = closeDishModal;
+  window.switchModalMedia = switchModalMedia;
 }
 
 // =============================================================================
@@ -796,34 +935,76 @@ function renderMenuGrid() {
   emptyState.style.display = "none";
 
   grid.innerHTML = filteredItems.map(item => {
+    const rawNum = item.number ? item.number.replace(/\D/g, "") : "";
+    const watermark = rawNum || (item.category === "non" ? "NON" : (item.category === "choy" ? "CHOY" : ""));
+
     const badgeHtml = item.number
       ? `<span class="item-num-badge">${item.number}</span>`
       : `<span class="category-pill">${item.categoryLabel}</span>`;
 
-    const snapshotSrc = STATE.snapshots[item.id] || "";
+    let highlightBadge = "";
+    if (item.name.includes("Dubayski")) highlightBadge = `<span class="card-badge-tag tag-special">✨ Maxsus</span>`;
+    else if (item.name.includes("G`ijdivon")) highlightBadge = `<span class="card-badge-tag tag-hit">⭐ Xit</span>`;
+    else if (item.name.includes("Mozrarella")) highlightBadge = `<span class="card-badge-tag tag-cheese">🧀 Mozzarella</span>`;
+    else if (item.name.includes("Achchiq")) highlightBadge = `<span class="card-badge-tag tag-spicy">🌶️ O'tkir</span>`;
+    else if (item.name.includes("Kavkaz (mol")) highlightBadge = `<span class="card-badge-tag tag-meat">🥩 Sara Go'sht</span>`;
+    else if (item.name.includes("Dollar")) highlightBadge = `<span class="card-badge-tag tag-premium">👑 Premium</span>`;
+    else if (item.name.includes("Tabaki")) highlightBadge = `<span class="card-badge-tag tag-crisp">🍗 Qarsildoq</span>`;
+    else if (item.id === "non-butun") highlightBadge = `<span class="card-badge-tag tag-special">🔥 Tandir</span>`;
+    else if (item.id === "choy-kok") highlightBadge = `<span class="card-badge-tag tag-hit">🌿 Milliy</span>`;
 
-    return `
-      <article class="menu-card" data-id="${item.id}" onclick="openDishModal('${item.id}', event)">
-        <!-- 3D Interactive Food Dish Showcase -->
-        <div class="card-dish-showcase" title="3D ko'rish uchun bosing">
-          <div class="dish-glow-aura"></div>
-          <div class="dish-stage-3d">
-            <div class="dish-plate-container">
-              <img class="dish-3d-thumb" src="${snapshotSrc}" alt="${item.name}" loading="lazy">
-              <div class="dish-steam-fx">
-                <span class="steam-curl"></span>
-                <span class="steam-curl"></span>
-                <span class="steam-curl"></span>
-              </div>
-            </div>
-            <div class="dish-ambient-shadow"></div>
+    const videoBadge = item.videoUrl ? `<span class="card-badge-tag tag-video">🎬 Video</span>` : "";
+    const snapshotSrc = STATE.snapshots[item.id] || "";
+    const seekTime = item.randomSeekTime || "1.5";
+
+    const showcaseHtml = item.videoUrl ? `
+      <!-- Live Video Random Frame Showcase -->
+      <div class="card-dish-showcase" title="3D & Jonli video ko'rish uchun bosing">
+        <div class="dish-glow-aura"></div>
+        <div class="dish-video-frame-container">
+          <video class="dish-card-video" src="${item.videoUrl}#t=${seekTime}" data-seek="${seekTime}" preload="metadata" muted playsinline loop></video>
+          <div class="video-card-overlay-tag">
+            <span class="live-dot-mini"></span>
+            <span>HD KADR</span>
+          </div>
+          <div class="dish-steam-fx">
+            <span class="steam-curl"></span>
+            <span class="steam-curl"></span>
+            <span class="steam-curl"></span>
           </div>
         </div>
+      </div>
+    ` : `
+      <!-- 3D Interactive Food Dish Showcase -->
+      <div class="card-dish-showcase" title="3D ko'rish uchun bosing">
+        <div class="dish-glow-aura"></div>
+        <div class="dish-stage-3d">
+          <div class="dish-plate-container">
+            <img class="dish-3d-thumb" src="${snapshotSrc}" alt="${item.name}" loading="lazy">
+            <div class="dish-steam-fx">
+              <span class="steam-curl"></span>
+              <span class="steam-curl"></span>
+              <span class="steam-curl"></span>
+            </div>
+          </div>
+          <div class="dish-ambient-shadow"></div>
+        </div>
+      </div>
+    `;
+
+    return `
+      <article class="menu-card" data-id="${item.id}" onclick="openDishModal('${item.id}', event, '3d')">
+        <div class="card-watermark">${watermark}</div>
+        <div class="card-ambient-beam"></div>
+
+        ${showcaseHtml}
 
         <div class="card-info-content">
           <div class="card-top">
             <div class="item-badge-wrap">
               ${badgeHtml}
+              ${highlightBadge}
+              ${videoBadge}
               <span class="category-pill">${item.categoryLabel}</span>
             </div>
             <div class="item-price-wrap">
@@ -837,16 +1018,69 @@ function renderMenuGrid() {
           </div>
         </div>
         <div class="card-action-bar">
-          <button class="btn-view-dish" type="button" onclick="openDishModal('${item.id}', event)" aria-label="${item.name} 3D ko'rish">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
-            </svg>
+          <button class="btn-view-dish" type="button" onclick="event.stopPropagation(); openDishModal('${item.id}', event, '3d')" aria-label="${item.name} 3D ko'rish">
+            <div class="btn-icon-spin">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+              </svg>
+            </div>
             <span>3D Ko'rish</span>
+            <span class="btn-live-spark"></span>
           </button>
+          ${item.videoUrl ? `
+          <button class="btn-card-video" type="button" onclick="event.stopPropagation(); openDishModal('${item.id}', event, 'video')" aria-label="${item.name} jonli video" title="Jonli HD videoni ko'rish">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="6 4 20 12 6 20 6 4"/>
+            </svg>
+            <span>Video</span>
+          </button>
+          ` : ''}
         </div>
       </article>
     `;
   }).join("");
+
+  // Seek and freeze each video card to its unique random frame
+  initCardVideoRandomFrames();
+}
+
+/**
+ * Initializes random frame seeking and interactive hover playback for dish video cards
+ */
+function initCardVideoRandomFrames() {
+  if (typeof document === "undefined") return;
+
+  const cardVideos = document.querySelectorAll(".dish-card-video");
+  cardVideos.forEach(vid => {
+    const targetTime = parseFloat(vid.dataset.seek) || 1.5;
+
+    const applySeek = () => {
+      try {
+        vid.currentTime = targetTime;
+      } catch (e) {}
+    };
+
+    if (vid.readyState >= 1) {
+      applySeek();
+    } else {
+      vid.addEventListener("loadedmetadata", applySeek, { once: true });
+    }
+
+    // Interactive Hover Preview: plays the video when hovering on the card
+    const card = vid.closest(".menu-card");
+    if (card && !card.dataset.hoverWired) {
+      card.dataset.hoverWired = "true";
+      card.addEventListener("mouseenter", () => {
+        vid.play().catch(() => {});
+      });
+      card.addEventListener("mouseleave", () => {
+        vid.pause();
+        try {
+          vid.currentTime = targetTime;
+        } catch (e) {}
+      });
+    }
+  });
 }
 
 function updateCategoryCounts() {
@@ -921,10 +1155,127 @@ function initCardParallax() {
 }
 
 // =============================================================================
-// 8. Application Initialization
+// 8. Live Background & Cursor Atmosphere
+// =============================================================================
+
+function initEmberBackground() {
+  if (typeof document === "undefined") return;
+  const canvas = document.getElementById("emberBgCanvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+
+  let width = (canvas.width = window.innerWidth);
+  let height = (canvas.height = window.innerHeight);
+
+  window.addEventListener("resize", () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  });
+
+  const particleCount = 45;
+  const particles = [];
+
+  for (let i = 0; i < particleCount; i++) {
+    particles.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      size: Math.random() * 2.2 + 0.8,
+      speedY: Math.random() * 0.6 + 0.25,
+      speedX: (Math.random() - 0.5) * 0.35,
+      opacity: Math.random() * 0.65 + 0.25,
+      phase: Math.random() * Math.PI * 2,
+      color: Math.random() > 0.4 ? "#ff5252" : (Math.random() > 0.5 ? "#ffb74d" : "#ff7043")
+    });
+  }
+
+  let mouseX = -1000;
+  let mouseY = -1000;
+
+  window.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  function renderEmbers() {
+    ctx.clearRect(0, 0, width, height);
+
+    for (let i = 0; i < particleCount; i++) {
+      const p = particles[i];
+      p.y -= p.speedY;
+      p.x += Math.sin(p.phase) * 0.35 + p.speedX;
+      p.phase += 0.02;
+
+      // Mouse proximity deflection
+      const dx = p.x - mouseX;
+      const dy = p.y - mouseY;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 110) {
+        const force = (110 - dist) / 110;
+        p.x += (dx / dist) * force * 2.5;
+        p.y += (dy / dist) * force * 2.5;
+      }
+
+      // Reset when particle reaches top
+      if (p.y < -10) {
+        p.y = height + 10;
+        p.x = Math.random() * width;
+      }
+
+      ctx.save();
+      ctx.globalAlpha = p.opacity * (0.8 + 0.2 * Math.sin(p.phase * 2));
+      ctx.fillStyle = p.color;
+      ctx.shadowBlur = 8;
+      ctx.shadowColor = p.color;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    }
+
+    requestAnimationFrame(renderEmbers);
+  }
+
+  renderEmbers();
+}
+
+function initCursorSpotlight() {
+  if (typeof document === "undefined") return;
+  const glow = document.getElementById("cursorGlow");
+  if (!glow) return;
+
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
+  let currentX = mouseX;
+  let currentY = mouseY;
+
+  window.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    glow.style.opacity = "1";
+  });
+
+  document.addEventListener("mouseleave", () => {
+    glow.style.opacity = "0";
+  });
+
+  function animateSpotlight() {
+    currentX += (mouseX - currentX) * 0.12;
+    currentY += (mouseY - currentY) * 0.12;
+    glow.style.transform = `translate3d(${currentX.toFixed(1)}px, ${currentY.toFixed(1)}px, 0) translate(-50%, -50%)`;
+    requestAnimationFrame(animateSpotlight);
+  }
+
+  animateSpotlight();
+}
+
+// =============================================================================
+// 9. Application Initialization
 // =============================================================================
 
 function initApp() {
+  initEmberBackground();
+  initCursorSpotlight();
   updateCategoryCounts();
   renderMenuGrid();
   initCardParallax();

@@ -195,7 +195,7 @@
         <div class="dish-modal-badge-row">
           <span id="dishModalNumber" class="item-num-badge">№ 11</span>
           <span id="dishModalCategory" class="category-pill">Shashlik</span>
-          <span class="badge-flame">🔥 Olovda pishgan</span>
+          <span id="dishModalMoodBadge" class="badge-flame">🔥 Olovda pishgan</span>
           <span id="dishModalVideoBadge" class="card-badge-tag tag-video" style="display: none;">🎬 Jonli Video</span>
         </div>
         <h2 id="dishModalTitle" class="dish-modal-title">Dubayski qiyma</h2>
@@ -204,20 +204,11 @@
           <span id="dishModalPriceUSD" class="dish-modal-price-usd">≈ $1.40</span>
         </div>
         <p id="dishModalDesc" class="dish-modal-desc">Maxsus marinadlangan sershira qiyma kabob</p>
+
+        <div id="dishModalSpecs" class="dish-modal-specs"></div>
         
-        <div class="dish-modal-features">
-          <div class="feature-item">
-            <span class="feature-icon">✨</span>
-            <span class="feature-text">Halol va 100% saralangan go'sht</span>
-          </div>
-          <div class="feature-item">
-            <span class="feature-icon">🌿</span>
-            <span class="feature-text">Sharqona xushbo'y tabiiy ziravorlar</span>
-          </div>
-          <div class="feature-item">
-            <span class="feature-icon">🔥</span>
-            <span class="feature-text">Qaynoq ko'mir cho'g'ida yangi pishiriladi</span>
-          </div>
+        <div id="dishModalFeatures" class="dish-modal-features">
+          <!-- Populated dynamically per dish in script.js -->
         </div>
 
         <div id="dishModalFlowBox" class="dish-modal-flow-box" style="display: none;">

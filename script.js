@@ -22,6 +22,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 18000,
     desc: "Maxsus marinadlangan sershira qiyma kabob",
+    moodBadge: "✨ Oshpaz Maxsusi",
+    about: "KEBABO'ning eng mashhur maxsus qiymasi: saralangan mol go'shti va mayin dumba maxsus Dubay uslubidagi xushbo'y ziravorlar bilan uzoq marinadlanadi. Ko'mir cho'g'ida tez qovurilib, sirti qizg'ish, ichi esa nihoyatda sershira chiqadi.",
+    specs: [
+      { label: "Asos", value: "Mol go'shti & dumba" },
+      { label: "Ta'mi", value: "Boy & xushbo'y" },
+      { label: "Tavsiya", value: "Tandir non bilan" }
+    ],
+    highlights: [
+      { icon: "✨", text: "Maxsus sirli Dubay ziravorlari va mayin marinad" },
+      { icon: "🥩", text: "80% saralangan mol go'shti va 20% shirali dumba" },
+      { icon: "🔥", text: "850°C cho'g'da sershira holatda pishiriladi" }
+    ],
     videoUrl: "videos/qiyma-shashlik.mp4"
   },
   {
@@ -32,6 +44,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 15000,
     desc: "Klassik an'anaviy mayin qiyma shashlik",
+    moodBadge: "🔥 Klassik Tanlov",
+    about: "Haqiqiy klassik o'zbek qiyma shashligi — ortiqcha qo'shimchalarsiz, faqat yangi maydalangan mol go'shti, mayin piyoz suvi, zira va qora murch uyg'unligi. Har kungi ishonchli va yengil tanlov.",
+    specs: [
+      { label: "Asos", value: "Klassik qiyma" },
+      { label: "Ta'mi", value: "Mayin & an'anaviy" },
+      { label: "Tavsiya", value: "Ko'k choy bilan" }
+    ],
+    highlights: [
+      { icon: "🧅", text: "Yangi to'g'ralgan piyoz va zira bilan yoğrilgan" },
+      { icon: "👌", text: "Og'izda erib ketadigan mayin klassik tekstura" },
+      { icon: "🔥", text: "Ko'mir taftida bir tekis qizartirilgan" }
+    ],
     videoUrl: "videos/obichniy-qiyma.mp4"
   },
   {
@@ -42,6 +66,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 18000,
     desc: "Buxoroning mashhur G`ijdivon uslubidagi shirali qiyma",
+    moodBadge: "⭐ Eng Ko'p Sotiladigan",
+    about: "Buxoroning afsonaviy G'ijdivon retsepti asosida tayyorlanadigan xit kabob. Go'sht qo'lda maydalanib, maxsus kashnich urug'i va zira bilan boyitiladi — har bir luqmasida haqiqiy sharqona shira seziladi.",
+    specs: [
+      { label: "Uslub", value: "Buxoro / G'ijdivon" },
+      { label: "Ta'mi", value: "To'yingan & shirali" },
+      { label: "Tavsiya", value: "Qizil piyoz & non" }
+    ],
+    highlights: [
+      { icon: "⭐", text: "G'ijdivonning asl an'anaviy oshpazlik uslubi" },
+      { icon: "🌿", text: "Kashnich urug'i, zira va tabiiy ziravorlar" },
+      { icon: "💧", text: "Ichidagi tabiiy shirasi saqlab qolinadi" }
+    ],
     videoUrl: "videos/gijdivon.mp4"
   },
   {
@@ -52,6 +88,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 22000,
     desc: "Issiq ko'mirda erib turuvchi nozik Mozzarella pishloqli qiyma",
+    moodBadge: "🧀 Pishloqli Xit",
+    about: "Qaynoq cho'g'dan endigina olingan sershira mol qiymasi ustiga yupqa bo'laklarda tabiiy Mozzarella pishlog'i yotqizilib, issiq taftda mayin eritiladi. Go'sht tutuni va qaymoqli pishloq ta'mi ajoyib uyg'unlashadi.",
+    specs: [
+      { label: "Tarkib", value: "Qiyma + Mozzarella" },
+      { label: "Ta'mi", value: "Qaymoqli & tutunli" },
+      { label: "Tavsiya", value: "Issiqligida yeyish" }
+    ],
+    highlights: [
+      { icon: "🧀", text: "Ustida mayin erib turuvchi 100% tabiiy Mozzarella" },
+      { icon: "🥩", text: "Yumshoq va shirali mol go'shti qiymasi" },
+      { icon: "🔥", text: "Cho'g' taftida pishloq yengil qizartirib olinadi" }
+    ],
     videoUrl: "videos/qiyma-mozzarella.mp4"
   },
   {
@@ -62,6 +110,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 18000,
     desc: "Xushbo'y yangi sabzavotlar va ziravorlar uyg'unligi",
+    moodBadge: "🫑 Sabzavotli",
+    about: "Shirali qiyma kabob bilan birga mangalda qovurilgan shirin bulg'or qalampiri, pishgan pomidor va piyoz uyg'unligi. Sabzavotlarning tabiiy suvi go'shtga yanada yengil va tetiklantiruvchi ta'm beradi.",
+    specs: [
+      { label: "Tarkib", value: "Qiyma & sabzavotlar" },
+      { label: "Ta'mi", value: "Yengil & xushbo'y" },
+      { label: "Tavsiya", value: "Ko'katlar bilan" }
+    ],
+    highlights: [
+      { icon: "🍅", text: "Ko'mirda pishgan pomidor va shirin bulg'or qalampiri" },
+      { icon: "🌿", text: "Yangi sabzavot sharbati bilan to'yingan qiyma" },
+      { icon: "⚖️", text: "Go'sht va sabzavotning muvozanatli uyg'unligi" }
+    ],
     videoUrl: "videos/avashnoy-qiyma.mp4"
   },
   {
@@ -72,6 +132,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 18000,
     desc: "O'tkir qizil qalampir va sharq ziravorlari bilan olovli kabob",
+    moodBadge: "🌶️ Olovli O'tkir",
+    about: "Achchiq ta'm ishqibozlari uchun maxsus tayyorlangan olovli qiyma. Qizil achchiq qalampir, paprika va tuyilgan murch go'shtga chuqur qizg'ish rang hamda qizdiruvchi xushbo'y o'tkirlik bag'ishlaydi.",
+    specs: [
+      { label: "Achchiqligi", value: "Yuqori (O'tkir)" },
+      { label: "Ta'mi", value: "Qalampirli & tutunli" },
+      { label: "Tavsiya", value: "Ko'k choy bilan" }
+    ],
+    highlights: [
+      { icon: "🌶️", text: "Tabiiy qizil achchiq qalampir va paprika qoplamasi" },
+      { icon: "🔥", text: "Olovli ta'mni sevuvchilar uchun maxsus retsept" },
+      { icon: "🫖", text: "Issiq ko'k choy bilan ta'mi yanada ochiladi" }
+    ],
     videoUrl: "videos/achchiq-qiyma.mp4"
   },
   {
@@ -82,6 +154,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 20000,
     desc: "Usta oshpazning maxsus retsepti asosidagi saralangan go'sht",
+    moodBadge: "👨‍🍳 Usta Retsepti",
+    about: "Odatdagidan yirikroq va to'yimliroq qilib sixga tortiladigan maxsus buyurtma qiymasi. Usta oshpaz tomonidan alohida e'tibor bilan saralangan yumshoq lahm va xushbo'y ziravorlardan tayyorlanadi.",
+    specs: [
+      { label: "Porsiya", value: "Yirik & to'yimli" },
+      { label: "Ta'mi", value: "Chuqur & go'shtli" },
+      { label: "Tavsiya", value: "Tandir non bilan" }
+    ],
+    highlights: [
+      { icon: "👨‍🍳", text: "Bosh oshpaz nazoratidagi maxsus buyurtma qiymasi" },
+      { icon: "🥩", text: "Yirikroq six va ko'proq saralangan lahm go'sht" },
+      { icon: "🔥", text: "Sekin aylantirib, mukammal qizarguncha pishiriladi" }
+    ],
     videoUrl: "videos/zakaz-qiyma.mp4"
   },
   {
@@ -92,6 +176,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 16000,
     desc: "Qarsildoq qovurilgan tovuq go'shti (qanot yoki son qismi)",
+    moodBadge: "🍗 Qarsildoq Tovuq",
+    about: "Maxsus sarimsoqli va limonli marinadda uzoq saqlangan barra tovuq qanotlari yoki son qismlari. Ko'mir cho'g'ida terisi tillarang va qarsildoq, ichki go'shti esa oppoq va mayin bo'lib pishadi.",
+    specs: [
+      { label: "Go'sht", value: "Tovuq qanot / son" },
+      { label: "Tekstura", value: "Sirti qarsildoq" },
+      { label: "Tavsiya", value: "Sous bilan" }
+    ],
+    highlights: [
+      { icon: "🍗", text: "Tanlovga ko'ra sershira son yoki qarsildoq qanot" },
+      { icon: "🧄", text: "Sarimsoq, limon va tabiiy o'tlar marinadi" },
+      { icon: "✨", text: "Tillarang qarsildoq qobiq va mayin ichki go'sht" }
+    ],
     videoUrl: "videos/tabaki-qanot.mp4"
   },
   {
@@ -102,6 +198,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 24000,
     desc: "Saralangan, toza yog'siz lahm go'sht bo'laklari",
+    moodBadge: "🥩 Toza Lahm",
+    about: "Faqat yog'siz, eng yumshoq mol lahm go'shtidan bir xil kubik shaklida to'g'ralib tayyorlanadi. Yog'li taomlarni yoqtirmaydiganlar va sof go'sht ta'mini qadrlovchilar uchun ideal parhezbop shashlik.",
+    specs: [
+      { label: "Kesim", value: "100% yog'siz lahm" },
+      { label: "Ta'mi", value: "Sof mol go'shti" },
+      { label: "Tavsiya", value: "Yengil ovqatlanishga" }
+    ],
+    highlights: [
+      { icon: "🥩", text: "Dumba va ortiqcha yog'siz sof mol lahm bo'laklari" },
+      { icon: "💪", text: "Yuqori oqsilli, yengil va parhezbop tanlov" },
+      { icon: "🔥", text: "Quritib yubormasdan, tez va mayin pishiriladi" }
+    ],
     videoUrl: "videos/torghamchi-shashlik.mp4"
   },
   {
@@ -112,6 +220,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 22000,
     desc: "Mayin lahm go'sht va xushbo'y dumba yog'ining shirali kombinatsiyasi",
+    moodBadge: "🔥 Shirali Klassika",
+    about: "O'zbek shashlikchilik san'atining oltin qoidasi: har bir yumshoq lahm bo'lagi orasiga mayin dumba yog'i teriladi. Pishish jarayonida erigan dumba go'shtni yog'lab, unga takrorlanmas shira beradi.",
+    specs: [
+      { label: "Kesim", value: "Lahm + dumba" },
+      { label: "Ta'mi", value: "Juda shirali" },
+      { label: "Tavsiya", value: "Ko'k choy bilan" }
+    ],
+    highlights: [
+      { icon: "🥩", text: "Lahm va dumba bo'laklarining ideal ketma-ketligi" },
+      { icon: "🔥", text: "Erigan dumba go'shtni yanada yumshoq qiladi" },
+      { icon: "🧅", text: "Sirka va ko'katli piyoz bilan mukammal ketadi" }
+    ],
     videoUrl: "videos/torghamchi-yogli.mp4"
   },
   {
@@ -122,6 +242,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 30000,
     desc: "Kavkazcha usulda marinadlangan yirik mol go'shti lahm bo'laklari",
+    moodBadge: "🏔️ Kavkazcha Yirik",
+    about: "Katta bo'laklarda kesilgan sara mol bo'yni va bel go'shti Kavkaz tog' giyohlari, rayhon va piyoz sharbatida 12 soat marinadlanadi. Yirik sixda pishib, sirti qarsildoq, ichi esa pushti-shirali chiqadi.",
+    specs: [
+      { label: "Kesim", value: "Yirik mol lahmi" },
+      { label: "Marinad", value: "12 soatlik Kavkaz" },
+      { label: "Tavsiya", value: "Non & qizil sous" }
+    ],
+    highlights: [
+      { icon: "🏔️", text: "Haqiqiy Kavkaz uslubidagi yirik go'sht bo'laklari" },
+      { icon: "🌿", text: "Tog' giyohlari va piyozli uzoq marinad" },
+      { icon: "🥩", text: "Bitta sixning o'zi katta va to'yimli porsiya" }
+    ],
     videoUrl: "videos/kavkaz-mol.mp4"
   },
   {
@@ -132,6 +264,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 33000,
     desc: "Hosilador qo'zichoq go'shti va an'anaviy xushbo'y tog' giyohlari",
+    moodBadge: "👑 Qirollik Qo'yi",
+    about: "Yosh qo'zichoqning eng yumshoq qismlaridan yirik kesilgan Kavkaz shashligi. Qo'y go'shtining tabiiy nozik hidi zira, rozmarin va tog' rayhoni bilan boyitilib, ko'mirda hashamatli ta'm kasb etadi.",
+    specs: [
+      { label: "Go'sht", value: "Sara qo'zichoq" },
+      { label: "Kesim", value: "Yirik Kavkaz" },
+      { label: "Tavsiya", value: "Issiq ko'k choy" }
+    ],
+    highlights: [
+      { icon: "🐑", text: "Faqat yosh va yumshoq qo'zichoq go'shtidan" },
+      { icon: "🌿", text: "Zira, rozmarin va xushbo'y tog' ziravorlari" },
+      { icon: "👑", text: "Mehmondo'st dasturxonlarning eng sara taomi" }
+    ],
     videoUrl: "videos/kavkaz-qoy.mp4"
   },
   {
@@ -142,6 +286,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 24000,
     desc: "Press ostida qarsildoq qilib qovurilgan sarxil jo'ja tabaka",
+    moodBadge: "🍗 Presslangan Tabaka",
+    about: "Butun jo'ja bo'laklari maxsus Kavkaz adzhikasi, sarimsoq va sariyog' bilan surtilib, ko'mir cho'g'i ustida press ostida pishiriladi. Har bir qismi oltinrang va xushbo'y qarsildoq bo'ladi.",
+    specs: [
+      { label: "Usul", value: "Ko'mirda presslangan" },
+      { label: "Ta'mi", value: "Sarimsoqli & achchiqroq" },
+      { label: "Tavsiya", value: "Lavash / Non bilan" }
+    ],
+    highlights: [
+      { icon: "🍗", text: "Oltinrang qarsildoq teri va nihoyatda yumshoq go'sht" },
+      { icon: "🌶️", text: "Kavkazcha adzhika va sarimsoqli xushbo'y sous" },
+      { icon: "🔥", text: "To'g'ridan-to'g'ri ko'mir taftida qizartirilgan" }
+    ],
     videoUrl: "videos/kavkaz-tabaki.mp4"
   },
   {
@@ -152,6 +308,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 22000,
     desc: "Marvariddek tizilgan shirali, qiyma va lahm qismli nozik kabob",
+    moodBadge: "🦪 Ikki Hil Ta'm",
+    about: "Bitta sixda ikki xil lazzat! Marvarid donalaridek chiroyli qilib mayin qiyma va yumshoq lahm go'sht bo'laklari ketma-ket tiziladi. Ham qiymaning yumshoqligini, ham lahmning to'yimliligini sevuvchilar uchun.",
+    specs: [
+      { label: "Tarkib", value: "Qiyma + Lahm" },
+      { label: "Ko'rinishi", value: "Marvarid tizimi" },
+      { label: "Tavsiya", value: "Tandir non bilan" }
+    ],
+    highlights: [
+      { icon: "🦪", text: "Qiyma va lahm bo'laklarining chiroyli kombinatsiyasi" },
+      { icon: "😋", text: "Bir porsiyada ikki xil kabob ta'mini tatib ko'ring" },
+      { icon: "🔥", text: "Bir tekis ko'mir cho'g'ida shirali pishiriladi" }
+    ],
     videoUrl: "videos/marvarid.mp4"
   },
   {
@@ -162,6 +330,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 23000,
     desc: "Go'sht va mayin dumba qatlamlarining go'zal qavatli simfoniyasi",
+    moodBadge: "🍰 Qavatli Shashlik",
+    about: "Mashhur tort sharafiga nomlangan qavat-qavat shashlik: yupqa tilimlangan mol go'shti va nafis dumba bo'laklari zich qatlam qilib sixga tortiladi. Kesilganda qatlamli ko'rinishi va erib ketuvchi ta'mi bilan ajralib turadi.",
+    specs: [
+      { label: "Tuzilishi", value: "Ko'p qavatli" },
+      { label: "Asos", value: "Yupqa lahm & dumba" },
+      { label: "Tavsiya", value: "Piyoz bilan" }
+    ],
+    highlights: [
+      { icon: "🍰", text: "Yupqa go'sht va dumba qatlamlarining nozik uyg'unligi" },
+      { icon: "✨", text: "Har bir qatlam ko'mir taftida bir-biriga singib pishadi" },
+      { icon: "🔥", text: "Sirti yengil qarsildoq, ichi esa og'izda eriydi" }
+    ],
     videoUrl: "videos/napalyon.mp4"
   },
   {
@@ -172,6 +352,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 22000,
     desc: "Yupqa tilim lahm go'shtning xushbo'y dumba bilan o'ralgan varianti",
+    moodBadge: "🌀 Rulet Uslubi",
+    about: "Keng va yupqa qilib ochilgan saralangan lahm go'sht ichiga ziravorlangan dumba va qiyma solinib, rulet shaklida mahkam o'raladi. Ko'mirda pishganda ichidagi shira tashqariga chiqmasdan o'zida saqlanadi.",
+    specs: [
+      { label: "Shakl", value: "O'ralgan rulet" },
+      { label: "Ta'mi", value: "Zich & sershira" },
+      { label: "Tavsiya", value: "Issiq non bilan" }
+    ],
+    highlights: [
+      { icon: "🌀", text: "Yupqa lahm ichiga o'ralgan xushbo'y dumba" },
+      { icon: "💧", text: "O'rama shakl go'sht shirasini ichida saqlab qoladi" },
+      { icon: "🔥", text: "Olov ustida aylantirib tillarang tusda pishiriladi" }
+    ],
     videoUrl: "videos/orama-fire-shashlik.mp4"
   },
   {
@@ -182,6 +374,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 14000,
     desc: "Yengil, parhezbop va sershira tovuq filesi shashligi",
+    moodBadge: "🌿 Parhezbop",
+    about: "Yog'siz toza tovuq ko'kragi (filesi) qaymoqli-ziravorli marinadda yumshatilib, sixda tez pishiriladi. Yengil hazm bo'ladi, bolalar va parhez tutuvchilar uchun eng maqbul va hamyonbop shashlik.",
+    specs: [
+      { label: "Go'sht", value: "100% tovuq filesi" },
+      { label: "Kaloriya", value: "Past / Yengil" },
+      { label: "Tavsiya", value: "Sarimsoq sousi" }
+    ],
+    highlights: [
+      { icon: "🕊️", text: "Suyaksiz va terisiz toza tovuq ko'kragi filesi" },
+      { icon: "🥛", text: "Qaymoq va mayin ziravorlar bilan yumshatilgan" },
+      { icon: "💚", text: "Yengil, foydali va bolalar uchun ham juda mos" }
+    ],
     videoUrl: "videos/tovuq-shashlik.mp4"
   },
   {
@@ -192,6 +396,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 23000,
     desc: "Yupqa qarsildoq lavashga o'ralgan ko'mirda pishgan mazali kabob",
+    moodBadge: "🌯 Qarsildoq Lavash",
+    about: "Pishgan sershira qiyma kabob pishloq va ko'katlar bilan birga yupqa lavash xamiriga o'ralib, yana bir bor ko'mir ustida qizartiriladi. Tashqarisi xushbo'y va qarsildoq, ichi esa issiq hamda to'yimli.",
+    specs: [
+      { label: "Qobiq", value: "Qarsildoq lavash" },
+      { label: "Ichki qism", value: "Qiyma & ko'kat" },
+      { label: "Tavsiya", value: "Pomidor sousi" }
+    ],
+    highlights: [
+      { icon: "🌯", text: "Yupqa lavashga o'ralib ko'mirda qizartirilgan" },
+      { icon: "🥩", text: "Ichida issiq va sershira qiyma kabob" },
+      { icon: "🔥", text: "Alohida non buyurtma qilmasdan ham juda to'yimli" }
+    ],
     videoUrl: "videos/lavash-rulet.mp4"
   },
   {
@@ -202,6 +418,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 35000,
     desc: "Maxsus kesimdagi eng sara go'shtdan tayyorlangan premium shashlik",
+    moodBadge: "👑 Eng Premium",
+    about: "KEBABO menyusining eng sara va qimmatbaho steyk-shashligi. Mol go'shtining eng yumshoq bel (bon-file) qismidan yirik medalon shaklida kesilib, faqat dengiz tuzi, yanchilgan murch va rozmarin bilan pishiriladi.",
+    specs: [
+      { label: "Kesim", value: "Bon-file steyk" },
+      { label: "Daraja", value: "VIP Premium" },
+      { label: "Tavsiya", value: "Qora murch bilan" }
+    ],
+    highlights: [
+      { icon: "👑", text: "Mol go'shtining eng yumshoq bon-file qismi" },
+      { icon: "🥩", text: "Steyk kabi qalin va nihoyatda sershira kesim" },
+      { icon: "🔥", text: "Asl go'sht ta'mini berkitmaydigan yengil ziravorlar" }
+    ],
     videoUrl: "videos/dollar.mp4"
   },
   {
@@ -212,6 +440,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 18000,
     desc: "Tandirda mayin dumba pardasiga o'ralib pishirilgan jigar shashlik",
+    moodBadge: "🔥 Pardali Jigar",
+    about: "Yangi so'yilgan qo'y yoki mol jigari yupqa to'rsimon dumba pardasi (charvi) bilan mahkam o'raladi. Olov ustida pishganda parda erib jigarga qarsildoq qobiq beradi, ichki qismi esa quruq bo'lmay mayin qoladi.",
+    specs: [
+      { label: "Usul", value: "Charvi pardali" },
+      { label: "Foydasi", value: "Temirga boy" },
+      { label: "Tavsiya", value: "Piyoz & zira" }
+    ],
+    highlights: [
+      { icon: "✨", text: "Yupqa tabiiy charvi pardasiga o'rab pishirilgan" },
+      { icon: "🔥", text: "Quritib yubormasdan, ichki yumshoqligini saqlaydi" },
+      { icon: "🌿", text: "Zira va yanchilgan murch bilan mukammal uyg'unlik" }
+    ],
     videoUrl: "videos/jigar-shashlik.mp4"
   },
   {
@@ -222,6 +462,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 12000,
     desc: "Yangi tandir nonining issiq bag'rida tortiladigan sershira qiyma",
+    moodBadge: "🫓 Tez & Mazali",
+    about: "Issiq tandir nonining bir bo'lagi ichiga ko'mirdan endigina uzilgan sershira qiyma va ziravorli piyoz bosib beriladi. Non go'shtning barcha mazali yog'i va shirasini o'ziga shimib oladi.",
+    specs: [
+      { label: "Tarkib", value: "Qiyma + Tandir non" },
+      { label: "Format", value: "To'yimli sendvich" },
+      { label: "Tavsiya", value: "Yo'l-yo'lakay / Tushlik" }
+    ],
+    highlights: [
+      { icon: "🫓", text: "Go'sht shirasini shimib olgan issiq tandir noni" },
+      { icon: "🍢", text: "Yangi pishgan sershira qiyma kabob bilan" },
+      { icon: "💰", text: "Eng hamyonbop va bir zumda to'ydiradigan tanlov" }
+    ],
     videoUrl: "videos/non-kabob.mp4"
   },
   {
@@ -232,6 +484,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 28000,
     desc: "Qo'y go'shtining eng shirin biqin qismidan tayyorlangan kachalka",
+    moodBadge: "🐑 Haqiqiy Kachalka",
+    about: "Qo'y qovurg'a va biqin qismidagi marmar yog' qatlamli go'sht bo'laklari (kachalka). Suyak atrofidagi go'sht ko'mirda pishganda ajoyib shirin ta'm va xushbo'y hid taratadi.",
+    specs: [
+      { label: "Qism", value: "Qo'y biqini (Kachalka)" },
+      { label: "Ta'mi", value: "Marmar & shirali" },
+      { label: "Tavsiya", value: "Ko'k choy bilan" }
+    ],
+    highlights: [
+      { icon: "🐑", text: "Tabiiy marmar yog' qatlamiga ega qo'y biqini" },
+      { icon: "🔥", text: "Suyak va go'sht uyg'unligida pishib, o'ta shirali chiqadi" },
+      { icon: "🌿", text: "Zira va yirik tuz bilan klassik tarzda tayyorlanadi" }
+    ],
     videoUrl: "videos/biqin-qoy.mp4"
   },
   {
@@ -242,6 +506,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 25000,
     desc: "Qo'y qovurg'asidan tayyorlangan qarsildoq qovurma shashlik",
+    moodBadge: "🍖 Qarsildoq Qovurg'a",
+    about: "Yosh qo'zichoq qovurg'achalari zira va sarimsoq bilan marinadlanib, ko'mirda tillarang qarsildoq bo'lguncha pishiriladi. Suyagidan oson ajraladigan nozik go'sht shinavandalar uchun haqiqiy zavq.",
+    specs: [
+      { label: "Kesim", value: "Suyakli qo'y qovurg'a" },
+      { label: "Tekstura", value: "Qarsildoq & yumshoq" },
+      { label: "Tavsiya", value: "Qo'lda yeyishga qulay" }
+    ],
+    highlights: [
+      { icon: "🍖", text: "Suyagi bilan ko'mirda pishirilgan yosh qo'y qovurg'asi" },
+      { icon: "✨", text: "Tashqi chetlari qarsildoq, suyak oldi nihoyatda shirin" },
+      { icon: "🔥", text: "Ko'mir tutuni va zira hidi bilan to'yingan" }
+    ],
     videoUrl: "videos/qovurga.mp4"
   },
   {
@@ -252,6 +528,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 25000,
     desc: "Xushbo'y dumba bilan boyitilgan mayin to'rg'amchi lahm",
+    moodBadge: "🥩 Maxsus To'rg'amchi",
+    about: "O'rtacha kattalikda to'g'ralgan sara lahm bo'laklari mo'lroq mayin dumba bilan birga pishiriladi. Oddiy to'rg'amchiga qaraganda yanada to'yimliroq va ko'mir ustida jizillab turadigan ta'mga ega.",
+    specs: [
+      { label: "Tarkib", value: "Lahm + mo'l dumba" },
+      { label: "Ta'mi", value: "To'yimli & boy" },
+      { label: "Tavsiya", value: "Piyoz & non" }
+    ],
+    highlights: [
+      { icon: "🥩", text: "Saralangan yirik lahm va shirali dumba nisbati" },
+      { icon: "🔥", text: "Ko'mirda jizillab, yaltiroq tillarang tus oladi" },
+      { icon: "🫖", text: "Issiq ko'k choy bilan hazm bo'lishi juda oson" }
+    ],
     videoUrl: "videos/torghamchi-yogl-34.mp4"
   },
   {
@@ -262,6 +550,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 22000,
     desc: "100% sara qo'y go'shti va dumbasidan tayyorlangan asl qiyma",
+    moodBadge: "🐑 100% Qo'y Qiymasi",
+    about: "Mol go'shti aralashtirilmagan, faqat 100% sara qo'y go'shti va dumba yog'idan tayyorlangan haqiqiy sharqona qiyma. O'ziga xos nozik qo'y go'shti ta'mi va yumshoqligi bilan ajralib turadi.",
+    specs: [
+      { label: "Go'sht", value: "100% qo'y go'shti" },
+      { label: "Ta'mi", value: "Nozik & an'anaviy" },
+      { label: "Tavsiya", value: "Ko'k choy bilan" }
+    ],
+    highlights: [
+      { icon: "🐑", text: "Faqat toza qo'y go'shti va dumba yog'idan maydalangan" },
+      { icon: "🌿", text: "Qo'y go'shtiga mos tabiiy zira va kashnich" },
+      { icon: "🔥", text: "Issiqligida og'izda erib ketadigan mayin qiyma" }
+    ],
     videoUrl: "videos/qoy-goshti-qiyma.mp4"
   },
   {
@@ -272,6 +572,18 @@ const MENU_DATA = [
     categoryLabel: "Shashlik",
     price: 16000,
     desc: "Mangalda tillarang tusda pishirilgan qarsildoq dumba kabob",
+    moodBadge: "🔥 Jizillagan Dumba",
+    about: "Shashlikxo'rlarning sevimli qo'shimchasi! Yangi qo'y dumbasi yupqa bo'laklarda kesilib, tuz va zira sepilib ko'mirda tillarang, sirti qarsildoq va ichi mayin holatga kelguncha qovuriladi.",
+    specs: [
+      { label: "Tarkib", value: "100% qo'y dumbasi" },
+      { label: "Tekstura", value: "Sirti qarsildoq" },
+      { label: "Tavsiya", value: "Issiq non & tuz" }
+    ],
+    highlights: [
+      { icon: "🔥", text: "Ko'mir cho'g'ida tillarang qarsildoq qilib pishirilgan" },
+      { icon: "🧂", text: "Yirik tuz va xushbo'y zira bilan ta'mlangan" },
+      { icon: "🫓", text: "Issiq tandir noni orasiga solib yeyish uchun a'lo" }
+    ],
     videoUrl: "videos/dumba-shashlik.mp4"
   },
 
@@ -284,6 +596,18 @@ const MENU_DATA = [
     categoryLabel: "Non",
     price: 3000,
     desc: "Tandirdan uzilgan issiq va mayin patir non (yarim bo'lak)",
+    moodBadge: "🔥 Tandirdan Issiq",
+    about: "Olovli loy tandirda pishirilgan, qora va oq kunjut sepilgan an'anaviy o'zbek patir nonining yarim bo'lagi. Bir kishilik tushlik yoki 2–3 six shashlik bilan yeyish uchun ayni muddao.",
+    specs: [
+      { label: "Porsiya", value: "Yarim patir" },
+      { label: "Pishirish", value: "Loy tandir" },
+      { label: "Tavsiya", value: "1 kishi uchun" }
+    ],
+    highlights: [
+      { icon: "🫓", text: "Chetlari qarsildoq, o'rtasi esa mayin va yumshoq" },
+      { icon: "🌱", text: "Usti qora sedana va qovurilgan kunjut bilan bezatilgan" },
+      { icon: "🔥", text: "Kun davomida tandirdan yangi va issiq holda uziladi" }
+    ],
     videoUrl: "videos/non-yarim.mp4",
     videoSharedUrl: "https://flow.google.com/shared/video/442c0b26-9313-4ebd-8881-744927cd9d86"
   },
@@ -295,6 +619,18 @@ const MENU_DATA = [
     categoryLabel: "Non",
     price: 5000,
     desc: "Tandirdan yangi uzilgan barra patir non (butun)",
+    moodBadge: "🔥 Barra Tandir Patir",
+    about: "Markaziga chiroyli chekich naqshi urilgan, yuzasi yaltiroq tillarang va xushbo'y kunjutli butun o'zbek patir noni. Do'stlar va oila dasturxonida issiq shashliklar bilan bo'lishish uchun eng yaxshi tanlov.",
+    specs: [
+      { label: "Porsiya", value: "Butun patir" },
+      { label: "Pishirish", value: "Loy tandir" },
+      { label: "Tavsiya", value: "2–4 kishi uchun" }
+    ],
+    highlights: [
+      { icon: "☀️", text: "Markazida an'anaviy chekich naqshli to'liq patir non" },
+      { icon: "✨", text: "Yaltiroq tillarang po'stloq va mayin bug'doy mag'zi" },
+      { icon: "🤝", text: "Shashlik shirasi va piyoz bilan dasturxon ko'rki" }
+    ],
     videoUrl: "videos/non-butun.mp4",
     videoSharedUrl: "https://flow.google.com/shared/video/51abbd78-66c0-41a8-ac37-25b8bc08c206"
   },
@@ -308,6 +644,18 @@ const MENU_DATA = [
     categoryLabel: "Choy",
     price: 3000,
     desc: "Xushbo'y damlangan milliy ko'k choy (chinni choynakda)",
+    moodBadge: "🌿 Shashlik Hamrohi",
+    about: "O'zbek dasturxonining ajralmas qismi — sara bargli № 95 ko'k choyi chinni choynakda qaynoq suvda damlab tortiladi. Yog'li qiyma, dumba va kachalka shashliklardan keyin oshqozonni yengillashtiradi.",
+    specs: [
+      { label: "Idish", value: "Chinni choynak + piyola" },
+      { label: "Ta'mi", value: "Tetiklantiruvchi" },
+      { label: "Tavsiya", value: "Barcha shashliklar bilan" }
+    ],
+    highlights: [
+      { icon: "🌿", text: "Sara № 95 ko'k choy barglaridan yangi damlangan" },
+      { icon: "🫖", text: "Issiqlikni saqlovchi milliy chinni choynak va piyolada" },
+      { icon: "💚", text: "Yog'li go'sht taomlaridan keyin hazmni yengillashtiradi" }
+    ],
     videoUrl: "videos/kok-choy.mp4"
   },
   {
@@ -318,6 +666,18 @@ const MENU_DATA = [
     categoryLabel: "Choy",
     price: 3000,
     desc: "To'yingan quyuq qora choy (chinni choynakda)",
+    moodBadge: "☕ To'yingan & Issiq",
+    about: "Chuqur yoqut rangli, xushbo'y va baquvvat qora choy chinni choynakda qaytarib damlanadi. Salqin kunlarda isitadi va yangi tandir noni hamda shashlikdan keyingi suhbatlarga o'zgacha fayz beradi.",
+    specs: [
+      { label: "Idish", value: "Chinni choynak + piyola" },
+      { label: "Ta'mi", value: "Quyuq & xushbo'y" },
+      { label: "Tavsiya", value: "Issiq non bilan" }
+    ],
+    highlights: [
+      { icon: "☕", text: "To'q yoqut rangli, quyuq va xushbo'y damlama" },
+      { icon: "🫖", text: "Chinni choynak va milliy piyolada issiq tortiladi" },
+      { icon: "⚡", text: "Kun davomida tetiklik va iliqlik bag'ishlaydi" }
+    ],
     videoUrl: "videos/qora-choy.mp4"
   }
 ];
@@ -427,6 +787,9 @@ function openDishModal(itemId, event = null) {
   const price = document.getElementById("dishModalPrice");
   const priceUSD = document.getElementById("dishModalPriceUSD");
   const desc = document.getElementById("dishModalDesc");
+  const moodBadge = document.getElementById("dishModalMoodBadge");
+  const specsEl = document.getElementById("dishModalSpecs");
+  const featuresEl = document.getElementById("dishModalFeatures");
   const videoBadge = document.getElementById("dishModalVideoBadge");
   const flowBox = document.getElementById("dishModalFlowBox");
   const flowLink = document.getElementById("dishModalFlowLink");
@@ -442,9 +805,37 @@ function openDishModal(itemId, event = null) {
     }
   }
   if (cat) cat.textContent = item.categoryLabel;
+  if (moodBadge) moodBadge.textContent = item.moodBadge || "🔥 Olovda pishgan";
   if (price) price.textContent = formatCurrency(item.price);
   if (priceUSD) priceUSD.textContent = formatUSD(item.price);
-  if (desc) desc.textContent = item.desc;
+  if (desc) desc.textContent = item.about || item.desc;
+
+  // Render dish-specific quick specs
+  if (specsEl) {
+    if (item.specs && item.specs.length > 0) {
+      specsEl.innerHTML = item.specs.map(s =>
+        `<span class="dish-spec-chip"><span>${s.label}:</span> <strong>${s.value}</strong></span>`
+      ).join("");
+      specsEl.style.display = "flex";
+    } else {
+      specsEl.innerHTML = "";
+      specsEl.style.display = "none";
+    }
+  }
+
+  // Render dish-specific highlights
+  if (featuresEl) {
+    const highlights = item.highlights || [
+      { icon: "✨", text: "Halol va 100% saralangan mahsulot" },
+      { icon: "🔥", text: "Buyurtma berilgan zahoti yangi tayyorlanadi" }
+    ];
+    featuresEl.innerHTML = highlights.map(h => `
+      <div class="feature-item">
+        <span class="feature-icon">${h.icon}</span>
+        <span class="feature-text">${h.text}</span>
+      </div>
+    `).join("");
+  }
 
   // Configure video assets
   if (item.videoUrl) {

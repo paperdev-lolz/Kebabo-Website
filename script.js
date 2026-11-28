@@ -984,8 +984,7 @@ function renderMenuGrid() {
       : `<span class="category-pill">${item.categoryLabel}</span>`;
 
     let highlightBadge = "";
-    if (item.name.includes("Dubayski")) highlightBadge = `<span class="card-badge-tag tag-special">✨ Maxsus</span>`;
-    else if (item.name.includes("G`ijdivon")) highlightBadge = `<span class="card-badge-tag tag-hit">⭐ Xit</span>`;
+    if (item.name.includes("G`ijdivon")) highlightBadge = `<span class="card-badge-tag tag-hit">⭐ Xit</span>`;
     else if (item.name.includes("Mozrarella")) highlightBadge = `<span class="card-badge-tag tag-cheese">🧀 Mozzarella</span>`;
     else if (item.name.includes("Achchiq")) highlightBadge = `<span class="card-badge-tag tag-spicy">🌶️ O'tkir</span>`;
     else if (item.name.includes("Kavkaz (mol")) highlightBadge = `<span class="card-badge-tag tag-meat">🥩 Sara Go'sht</span>`;
@@ -994,19 +993,14 @@ function renderMenuGrid() {
     else if (item.id === "non-butun") highlightBadge = `<span class="card-badge-tag tag-special">🔥 Tandir</span>`;
     else if (item.id === "choy-kok") highlightBadge = `<span class="card-badge-tag tag-hit">🌿 Milliy</span>`;
 
-    const videoBadge = item.videoUrl ? `<span class="card-badge-tag tag-video">🎬 Video</span>` : "";
     const seekTime = item.randomSeekTime || "1.5";
 
     const showcaseHtml = `
       <!-- Live Video Random Frame Showcase -->
-      <div class="card-dish-showcase" title="Jonli video ko'rish uchun bosing">
+      <div class="card-dish-showcase" title="Batafsil ko'rish uchun bosing">
         <div class="dish-glow-aura"></div>
         <div class="dish-video-frame-container">
           <video class="dish-card-video" src="${item.videoUrl}#t=${seekTime}" data-seek="${seekTime}" preload="metadata" muted playsinline loop></video>
-          <div class="video-card-overlay-tag">
-            <span class="live-dot-mini"></span>
-            <span>HD KADR</span>
-          </div>
           <div class="dish-steam-fx">
             <span class="steam-curl"></span>
             <span class="steam-curl"></span>
@@ -1028,7 +1022,6 @@ function renderMenuGrid() {
             <div class="item-badge-wrap">
               ${badgeHtml}
               ${highlightBadge}
-              ${videoBadge}
               <span class="category-pill">${item.categoryLabel}</span>
             </div>
             <div class="item-price-wrap">
@@ -1040,14 +1033,6 @@ function renderMenuGrid() {
             <h3 class="item-name">${item.name}</h3>
             <p class="item-desc">${item.desc}</p>
           </div>
-        </div>
-        <div class="card-action-bar">
-          <button class="btn-card-video" style="width: 100%;" type="button" onclick="event.stopPropagation(); openDishModal('${item.id}', event)" aria-label="${item.name} jonli video" title="Jonli HD videoni ko'rish">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <polygon points="6 4 20 12 6 20 6 4"/>
-            </svg>
-            <span>Videoni Ko'rish</span>
-          </button>
         </div>
       </article>
     `;
